@@ -30,7 +30,6 @@ def head(title, desc, active):
     <a href="/verein"{' class="is-active"' if active=='verein' else ''}>Verein</a>
     <a href="/anlaesse"{' class="is-active"' if active=='anlaesse' else ''}>Anlässe</a>
     <a href="/weinkeller"{' class="is-active"' if active=='weinkeller' else ''}>Weinkeller</a>
-    <a href="/login" class="nav-muted">Login</a>
     <a href="/mitglied-werden" class="nav-cta">Mitglied werden</a>
   </nav>
 </header></div>
@@ -45,7 +44,7 @@ FOOTER = '''</main>
       <span style="color:#9A9E9E;line-height:1.6">Weinclub crazytable<br>Kirchberg BE</span>
     </div>
     <div><span class="h">Club</span><a href="/verein">Verein &amp; Vorstand</a><a href="/anlaesse">Anlässe</a><a href="/weinkeller">Weinkeller</a></div>
-    <div><span class="h">Mitmachen</span><a href="/mitglied-werden">Mitglied werden</a><a href="/verein#ideenbox">Ideenbox</a><a href="/login">Mitglieder-Login</a></div>
+    <div><span class="h">Mitmachen</span><a href="/mitglied-werden">Mitglied werden</a><a href="/verein#ideenbox">Ideenbox</a><a href="/mitglied-werden#kontakt">Kontakt</a></div>
     <div><span class="h">Kontakt</span><a href="mailto:stefan.moser@crazytable.ch">stefan.moser@crazytable.ch</a><a href="/mitglied-werden#kontakt">Kontaktformular</a></div>
   </div>
   <div class="footer-bottom">
@@ -85,7 +84,7 @@ NEXT_EVENT = '''
     <span class="small">Für Mitglieder · Anmeldung bis [Datum]</span>
   </div>
   <div class="c10-3 stack stack-sm" style="padding-top:6px">
-    <a class="btn btn-dark" href="/login">Anmelden</a>
+    <a class="btn btn-dark" href="mailto:stefan.moser@crazytable.ch?subject=Anmeldung%20Degustationsabend">Anmelden</a>
     <a class="btn btn-ghost" href="/termine.ics">In Kalender</a>
     <a class="arrow" href="/anlaesse" style="text-align:center;padding-top:8px">Alle Anlässe →</a>
   </div>
@@ -348,7 +347,6 @@ WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des We
         <li><span class="n">3</span><span class="name">Caiarossa 2019</span><span class="tag">Toskana</span></li>
         <li><span class="n">4</span><span class="name">Vivaltus 2016</span><span class="tag">Ribera del Duero</span></li>
       </ol>
-      <p class="small">Factsheets der Kandidaten liegen im <a href="/login" style="text-decoration:underline">Mitgliederbereich</a>.</p>
     </article>
     <article class="vote">
       <div class="vote-head"><span class="meta">Hauptversammlung — 25. Mai 2024</span><h3>Drei Portugiesen zur Wahl</h3></div>
@@ -357,7 +355,6 @@ WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des We
         <li><span class="n">2</span><span class="name">Manoella Vinhas Velhas</span><span class="tag">Douro</span></li>
         <li><span class="n">3</span><span class="name">Brites Aguiar DOC</span><span class="tag">Dão</span></li>
       </ol>
-      <p class="small">Factsheets der Kandidaten liegen im <a href="/login" style="text-decoration:underline">Mitgliederbereich</a>.</p>
     </article>
     <article class="vote">
       <div class="vote-head"><span class="meta">Hauptversammlung — 23. Mai 2025</span><h3>Ein Klassiker aus dem Veneto</h3></div>
@@ -415,7 +412,7 @@ VEREIN = head('Verein & Vorstand – crazytable', 'Vorstand, Hauptversammlung un
     <p class="overline">Hauptversammlung</p>
     <h2 style="font-size:40px">Einmal im Jahr: Rechnung, Programm – und der Kellerentscheid</h2>
     <p style="color:var(--text)">Die Hauptversammlung findet jeweils vor einem Degustationsabend statt. Wer nicht dabei sein kann, stimmt vorab schriftlich ab – und kann die Weine des Abends in den zehn Tagen danach mit 20 % Rabatt bestellen.</p>
-    <div class="row"><a class="btn btn-ghost" href="/login">Statuten (PDF)</a><a class="btn btn-ghost" href="/login">Schriftlich abstimmen</a></div>
+    <div class="row"><a class="btn btn-ghost" href="/statuten.pdf">Statuten (PDF)</a><a class="btn btn-ghost" href="mailto:stefan.moser@crazytable.ch?subject=Schriftliche%20Abstimmung%20HV">Schriftlich abstimmen</a></div>
   </div>
   <ol class="agenda c7-6">
     <li><span class="n">a</span>Wahl des Vorstandes und der Revisoren</li>
@@ -526,8 +523,6 @@ def simple(title, desc, active, h1, body):
 
 DANKE = simple('Danke – crazytable', 'Vielen Dank für deine Nachricht.', '', 'Danke, ist angekommen.',
     '<p>Deine Nachricht ist beim Vorstand eingetroffen. Wir melden uns innert einer Woche.</p><p><a class="link-u" href="/">Zur Startseite</a></p>')
-LOGIN = simple('Login – crazytable', 'Mitgliederbereich des Weinclubs crazytable.', '', 'Mitgliederbereich',
-    '<p>Der Mitgliederbereich (Protokolle, Statuten, Abstimmungen, Weinbestellungen) ist in Vorbereitung. Bis dahin erreichst du den Vorstand unter <a href="mailto:stefan.moser@crazytable.ch" style="text-decoration:underline">stefan.moser@crazytable.ch</a>.</p><p class="small">Hinweis: Diese Seite später auf die Weinclub-Plattform umleiten (siehe _redirects).</p>')
 DISCLAIMER = simple('Disclaimer – crazytable', 'Rechtliche Hinweise.', '', 'Disclaimer',
     '<p>[Disclaimer-Text von der bisherigen Website hier einsetzen.]</p>')
 DATENSCHUTZ = simple('Datenschutz – crazytable', 'Datenschutzerklärung des Weinclubs crazytable.', '', 'Datenschutz',
@@ -535,7 +530,7 @@ DATENSCHUTZ = simple('Datenschutz – crazytable', 'Datenschutzerklärung des We
 
 PAGES = {
     'index.html': INDEX, 'anlaesse.html': ANLAESSE, 'weinkeller.html': WEINKELLER, 'verein.html': VEREIN,
-    'mitglied-werden.html': MITGLIED, 'danke.html': DANKE, 'login.html': LOGIN,
+    'mitglied-werden.html': MITGLIED, 'danke.html': DANKE,
     'disclaimer.html': DISCLAIMER, 'datenschutz.html': DATENSCHUTZ,
 }
 for name, html in PAGES.items():

@@ -4,7 +4,7 @@ Statische Website, gebaut für Netlify. Keine Datenbank, kein Build-Tool nötig.
 
 ## Struktur
 - `index.html`, `anlaesse.html`, `weinkeller.html`, `verein.html`, `mitglied-werden.html` – die fünf Seiten
-- `danke.html` (Formular-Bestätigung), `login.html` (Platzhalter), `disclaimer.html`, `datenschutz.html`
+- `danke.html` (Formular-Bestätigung), `disclaimer.html`, `datenschutz.html`
 - `css/style.css` – das ganze Design (Farben/Schriften oben in `:root`)
 - `img/` – Bilder; `favicon.svg` ist drin, Fotos fehlen noch (siehe unten)
 - `_redirects` – alte Clubdesk-Adressen → neue Seiten; später Login → Weinclub-Plattform

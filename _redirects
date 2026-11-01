@@ -6,6 +6,3 @@
 /degustationsabende             /anlaesse            301
 /kontakt                        /mitglied-werden     301
 /clubdesk/*                     /                    301
-
-# Später: Login auf die Weinclub-Plattform zeigen lassen, z. B.
-# /login   https://app.crazytable.ch/login   302
