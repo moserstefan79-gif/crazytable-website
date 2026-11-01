@@ -216,7 +216,8 @@ em.accent{font-style:italic;color:var(--green)}
 .cellar-rule{display:grid;grid-template-columns:auto 1fr;column-gap:16px;row-gap:14px;align-items:baseline;border-top:1px solid rgba(255,255,255,.25);padding-top:24px}
 .cellar-rule .k{font-family:var(--serif);font-size:30px;color:var(--cyan);line-height:1;white-space:nowrap}
 .cellar-rule .v{font-size:13px;color:#C9CDCD;line-height:1.4}
-.bottles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.bottles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.bottle h3{font-size:26px}
 .bottle{display:flex;flex-direction:column;gap:20px}
 .bottle-img{position:relative}
 .bottle-img .ph{padding:0;overflow:hidden}
@@ -243,7 +244,7 @@ em.accent{font-style:italic;color:var(--green)}
 .lg-dot{width:10px;height:10px;border-radius:50%;background:var(--black)}
 .lg-wait{width:24px;height:1px;background:var(--black)}
 .lg-bar{width:24px;height:10px;background:var(--cyan)}
-.votes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+.votes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
 .vote{display:flex;flex-direction:column;gap:20px;padding:32px;border:1px solid var(--line);background:var(--white)}
 .vote-head{display:flex;flex-direction:column;gap:8px}
 .candidates{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
