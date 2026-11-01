@@ -272,13 +272,13 @@ WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des We
   <div class="between reveal"><h2>Im Keller</h2><span class="small">Stand: Hauptversammlung [Mai 2026] — wird jährlich aktualisiert</span></div>
   <div class="bottles">
     <article class="bottle">
-      <div class="bottle-img">{ph('', img='/img/pontet-canet.jpg', alt='Château Pontet-Canet, Pauillac')}<span class="status status-ok">In Subskription · Lieferung 2026</span></div>
+      <div class="bottle-img">{ph('', img='/img/pontet-canet.jpg', alt='Château Pontet-Canet, Pauillac')}<span class="status status-ok">In Subskription · 18 Flaschen · Lieferung 2026</span></div>
       <div class="bottle-body">
         <span class="meta">Investment I — HV 2023</span>
         <h3>Château Pontet-Canet 2023</h3>
         <span class="small">Pauillac, Bordeaux · 5ème Grand Cru Classé · biodynamisch</span>
         <p>Im Gründungsjahr en primeur gekauft. 2026 kommt die Lieferung – dann entscheiden wir: ein paar Flaschen öffnen oder alles weiter liegen lassen.</p>
-        <dl class="facts"><dt>Flaschen</dt><dd>[x] × 75 cl</dd><dt>Einstand</dt><dd>[CHF]</dd><dt>Trinkfenster</dt><dd>ab ca. [2033]</dd></dl>
+        <dl class="facts"><dt>Flaschen</dt><dd>18 × 75 cl</dd><dt>Einstand</dt><dd>[CHF]</dd><dt>Trinkfenster</dt><dd>ab ca. [2033]</dd></dl>
       </div>
     </article>
     <article class="bottle">
@@ -343,7 +343,7 @@ WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des We
     <article class="vote">
       <div class="vote-head"><span class="meta">Hauptversammlung — 6. Mai 2023</span><h3>Vier Kandidaten, ein Bordeaux</h3></div>
       <ol class="candidates">
-        <li class="winner"><span class="n">1</span><span class="name">Château Pontet-Canet 2023</span><span class="tag">Gewählt · Subskription</span></li>
+        <li class="winner"><span class="n">1</span><span class="name">Château Pontet-Canet 2023</span><span class="tag">Gewählt · 18 Flaschen</span></li>
         <li><span class="n">2</span><span class="name">Château Giscours 2020</span><span class="tag">Grand Cru Classé</span></li>
         <li><span class="n">3</span><span class="name">Caiarossa 2019</span><span class="tag">Toskana</span></li>
         <li><span class="n">4</span><span class="name">Vivaltus 2016</span><span class="tag">Ribera del Duero</span></li>
