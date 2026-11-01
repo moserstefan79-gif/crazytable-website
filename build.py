@@ -182,7 +182,7 @@ ANLAESSE = head('Anlässe – crazytable', 'Degustationsabende und Reisen des We
   </div>
   <div class="c4-6 stack">
     <h2 style="font-size:44px">Besenwirtschaft – ein Tag Württemberg</h2>
-    <p class="lead" style="font-size:17px">Tagesanlass zur Wildsaison: zwölf süddeutsche Weine wie in einer schwäbischen Besenwirtschaft, dazu passende Küche – und als Vorspiel eine Einkaufsfahrt nach Württemberg.</p>
+    <p class="lead" style="font-size:17px">Ein Tag wie in einer schwäbischen Besenwirtschaft: zwölf süddeutsche Weine, dazu passende Küche und viel Zeit am langen Tisch.</p>
     <span class="small">Für Mitglieder · Details folgen</span>
   </div>
   <div class="c10-3 stack stack-sm" style="padding-top:6px">
