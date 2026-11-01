@@ -63,7 +63,10 @@ IMG = {
     'suedamerika': 'https://live.staticflickr.com/65535/54112318980_703b5bc41b.jpg',
     'portugal': 'https://live.staticflickr.com/65535/53241396242_a99cd38c2a.jpg',
     'bordeaux': 'https://live.staticflickr.com/65535/52875887701_20704ac5eb.jpg',
+    'toskana': 'https://live.staticflickr.com/65535/55625556769_0d6940e498_h.jpg',
+    'wild': 'https://live.staticflickr.com/65535/55625496583_50e0652477_h.jpg',
 }
+ALB = {'toskana':'https://www.flickr.com/photos/197768276@N04/albums/72177720336438916','wild':'https://www.flickr.com/photos/197768276@N04/albums/72177720336449833'}
 
 def ph(label, cls='ratio-45', img=None, alt=''):
     if img:
@@ -74,14 +77,14 @@ NEXT_EVENT = '''
 <section class="section grid-12" style="align-items:start">
   <div class="c1-3 stack-sm stack">
     <p class="overline">Nächster Anlass</p>
-    <span style="font-family:var(--serif);font-size:72px;line-height:1">[TT.]</span>
-    <span style="font-size:15px;color:var(--text)">[Monat 2026] — 18.30 Uhr</span>
-    <span style="font-size:15px;color:var(--muted)">[Ort, Kirchberg BE]</span>
+    <span style="font-family:var(--serif);font-size:72px;line-height:1">26.</span>
+    <span style="font-size:15px;color:var(--text)">Mai 2027 — Mittwoch</span>
+    <span style="font-size:15px;color:var(--muted)">Kargo68, Zuchwil / Solothurn</span>
   </div>
   <div class="c4-6 stack">
-    <h2 style="font-size:44px">Jumilla-Abend – Monastrell und die Weine der Familie Gil</h2>
-    <p class="lead" style="font-size:17px">Ein Schaumwein, zwei Weissweine, sechs kellerfähige Rotweine aus dem Südosten Spaniens – dazu ein passendes Menü und viel Zeit zum Fachsimpeln.</p>
-    <span class="small">Für Mitglieder · Anmeldung bis [Datum]</span>
+    <h2 style="font-size:44px">Doce Copas – zwölf Gläser Spanien</h2>
+    <p class="lead" style="font-size:17px">Zwölf spanische Weine, ausgesucht mit Vinos de España aus der Region Solothurn, dazu eine kulinarische Begleitung zu jedem Glas – ohne Musik, dafür mit viel Zeit am Tisch.</p>
+    <span class="small">Für Mitglieder · Details und Anmeldung folgen im Frühjahr 2027</span>
   </div>
   <div class="c10-3 stack stack-sm" style="padding-top:6px">
     <a class="btn btn-dark" href="mailto:stefan.moser@crazytable.ch?subject=Anmeldung%20Degustationsabend">Anmelden</a>
@@ -132,9 +135,9 @@ INDEX = head('crazytable – Weinclub in Kirchberg BE', 'Weinclub in Kirchberg B
     <a class="link-u" href="/anlaesse">Alle Berichte und Fotos</a>
   </div>
   <div class="cards">
-    <a class="card" href="/anlaesse#wallis-2025">{ph('Foto Wallis', img=IMG['wallis'], alt='Degustationsreise ins Wallis, Oktober 2025')}<span class="meta">25. Oktober 2025 — Reise</span><h3>Ins Wallis und nach Gruyères</h3></a>
-    <a class="card" href="/anlaesse#spanien-2025">{ph('Foto Spanien', img=IMG['spanien'], alt='Degustationsabend Spanien, Mai 2025')}<span class="meta">23. Mai 2025 — Degustationsabend</span><h3>Mit dem Al Andalus durch Spanien</h3></a>
-    <a class="card" href="/anlaesse#suedamerika-2024">{ph('Foto Südamerika', img=IMG['suedamerika'], alt='Degustationsabend Südamerika, November 2024')}<span class="meta">2. November 2024 — Degustationsabend</span><h3>Mexiko und Argentinien am Holzkohlegrill</h3></a>
+    <a class="card" href="/anlaesse#wild-2026">{ph('', img=IMG['wild'], alt='Wild on Tour, Solothurn, Oktober 2026')}<span class="meta">17. Oktober 2026 — Degustationstag</span><h3>Wild on Tour – vier Stationen durch Solothurn</h3></a>
+    <a class="card" href="/anlaesse#toskana-2026">{ph('', img=IMG['toskana'], alt='Degustationsabend Toskana, Mai 2026')}<span class="meta">8. Mai 2026 — Degustationsabend</span><h3>Toskana – vier Weingüter im Glas</h3></a>
+    <a class="card" href="/anlaesse#wallis-2025">{ph('', img=IMG['wallis'], alt='Degustationsreise ins Wallis, Oktober 2025')}<span class="meta">25. Oktober 2025 — Reise</span><h3>Ins Wallis und nach Gruyères</h3></a>
   </div>
 </section>
 </div>
@@ -155,7 +158,8 @@ INDEX = head('crazytable – Weinclub in Kirchberg BE', 'Weinclub in Kirchberg B
 ''' + FOOTER
 
 def card(anchor, meta, title, text, img, alt, fotos=None, key=None):
-    links = f'<a href="#{anchor}">Bericht →</a>' + (f'<a href="https://www.flickr.com/" target="_blank" rel="noopener">{fotos} Fotos</a>' if fotos else '')
+    album = ALB.get(key, 'https://www.flickr.com/photos/197768276@N04/albums')
+    links = f'<a href="#{anchor}">Bericht →</a>' + (f'<a href="{album}" target="_blank" rel="noopener">{fotos} Fotos</a>' if fotos else '')
     return f'<article class="card">{ph("", img=IMG[key], alt=alt) if key else ph("Foto")}<span class="meta">{meta}</span><h3>{title}</h3><p>{text}</p><div class="links">{links}</div></article>'
 
 ANLAESSE = head('Anlässe – crazytable', 'Degustationsabende und Reisen des Weinclubs crazytable: kommende Termine, Berichte und Fotos.', 'anlaesse') + f'''
@@ -175,16 +179,18 @@ ANLAESSE = head('Anlässe – crazytable', 'Degustationsabende und Reisen des We
     <h2>Rückblick</h2>
     <div class="chips"><span class="chip is-active">Alle</span><span class="chip">Degustationsabende</span><span class="chip">Reisen</span><span class="chip">Hauptversammlungen</span></div>
   </div>
-  <article class="feature" id="wallis-2025-card">
-    {ph('', img=IMG['wallis'], alt='Cave du Rhodan, Salgesch')}
+  <article class="feature" id="wild-2026-card">
+    {ph('', img=IMG['wild'], alt='Wild on Tour, Solothurn')}
     <div class="body">
-      <span class="meta">25. Oktober 2025 — Degustationsreise</span>
-      <h3 style="font-size:40px">Premiere: Ins Wallis und nach Gruyères</h3>
-      <p style="color:var(--text)">Mit dem Car zur Cave du Rhodan in Salgesch – Fendant zur Begrüssung, Schafe zwischen den Merlot-Reben, Kellerführung und Degustation. Dann weiter ins Chalet de Gruyère zu Raclette, Fondue und Tischgrill.</p>
-      <div class="links" style="display:flex;gap:18px;font-size:13px;letter-spacing:.04em"><a href="#wallis-2025">Bericht lesen →</a><a href="https://www.flickr.com/" target="_blank" rel="noopener">22 Fotos</a></div>
+      <span class="meta">17. Oktober 2026 — Degustationstag</span>
+      <h3 style="font-size:40px">Wild on Tour – vier Stationen durch Solothurn</h3>
+      <p style="color:var(--text)">Eine wandernde Wild-Degustation zu Fuss: Terrasse im Fleur de Soleure, Wurst und Brot überm Feuer im RiverYard, eine elegante Wildkreation im Atika und zum Schluss das Wildbuffet mit Käse vom Bucheggberg im Kargo68 – bei jeder Witterung.</p>
+      <div class="links" style="display:flex;gap:18px;font-size:13px;letter-spacing:.04em"><a href="#wild-2026">Bericht lesen →</a><a href="{ALB['wild']}" target="_blank" rel="noopener">9 Fotos</a></div>
     </div>
   </article>
   <div class="cards">
+    {card('toskana-2026','8. Mai 2026 — Degustationsabend','Toskana – vier Weingüter im Glas','Arillo in Terrabianca, Agricole Selvi, Castello di Bolgheri und Tenuta Pietranera – Chianti, Bolgheri und Maremma an einem Abend.',None,'Degustationsabend Toskana',17,'toskana')}
+    {card('wallis-2025','25. Oktober 2025 — Degustationsreise','Premiere: Ins Wallis und nach Gruyères','Mit dem Car zur Cave du Rhodan in Salgesch, dann ins Chalet de Gruyère zu Raclette, Fondue und Tischgrill.',None,'Degustationsreise Wallis',22,'wallis')}
     {card('spanien-2025','23. Mai 2025 — Degustationsabend','Mit dem Al Andalus durch Spanien','Apéro im 1881-Waggon, Paella und die «Totenköpfe» – kraftvoll, magisch, intensiv in der Frucht.',None,'Degustationsabend Spanien',57,'spanien')}
     {card('suedamerika-2024','2. November 2024 — Degustationsabend','Südamerika: Mexiko und Argentinien','Chenin Blanc und Chardonnay aus Baja California, drei Rote von L.A. Cetto, dann Holzkohle und ein Malbec-Duell aus über 1000 m Höhe.',None,'Degustationsabend Südamerika',14,'suedamerika')}
     {card('alpen-2024','25. Mai 2024 — Hauptversammlung & Degustation','Bündnerland, Südtirol, Carnuntum','Drei Weingüter der Cave Amann im Wettstreit, Schöpsernes im Hauptgang – und zuvor die Jahresrechnung 2023.',None,'',None,None)}
@@ -201,6 +207,18 @@ ANLAESSE = head('Anlässe – crazytable', 'Degustationsabende und Reisen des We
 
 <section class="section" style="border-bottom:0">
   <p class="overline" style="margin-bottom:8px">Berichte</p>
+
+  <article class="report prose" id="wild-2026">
+    <div class="head"><span class="meta">17. Oktober 2026 — Degustationstag</span><h2 style="margin:0">Wild on Tour – vier Stationen durch Solothurn</h2></div>
+    <p>Um 13 Uhr trafen wir uns am Bahnhof Solothurn – zehn Minuten zu Fuss, dann stand die erste Station: die Terrasse des Fleur de Soleure, leicht, weiblich, pflanzlich gedacht, mit den ersten Gläsern zum Einstimmen. Weiter ging es ans Wasser ins RiverYard, wo Wurst und Brot überm Feuer auf kraftvolle Rote trafen.</p>
+    <p>Im Atika wurde es elegant: eine feine Wildkreation, dazu leichtere Rotweine und die Zigarrenterrasse für die, die wollten. Den Abschluss machte das Kargo68 mit einem Wildbuffet und Käse vom Bucheggberg. Vier Häuser, ein Thema, ein Nachmittag zu Fuss – und das Wetter spielte keine Rolle, weil es von Anfang an keine spielen durfte.</p>
+  </article>
+
+  <article class="report prose" id="toskana-2026">
+    <div class="head"><span class="meta">8. Mai 2026 — Degustationsabend</span><h2 style="margin:0">Toskana – vier Weingüter im Glas</h2></div>
+    <p>Vier Toskaner an einem Abend: Arillo in Terrabianca aus dem Chianti Classico, Agricole Selvi, Castello di Bolgheri von der Küste und Tenuta Pietranera. Degustiert wurde mit Degustationsblättern und Bestellformular – wer wollte, nahm seine Favoriten anschliessend mit nach Hause.</p>
+    <p>[Hier zwei, drei Sätze zum Menü und zu den Höhepunkten des Abends ergänzen.]</p>
+  </article>
 
   <article class="report prose" id="wallis-2025">
     <div class="head"><span class="meta">25. Oktober 2025 — Degustationsreise</span><h2 style="margin:0">Premiere: Ins Wallis und nach Gruyères</h2></div>

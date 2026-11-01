@@ -5,12 +5,20 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:crazytable Anlässe
 BEGIN:VEVENT
-UID:jumilla-2026@crazytable.ch
-DTSTAMP:20261101T150000Z
-DTSTART;TZID=Europe/Zurich:20260601T183000
-DTEND;TZID=Europe/Zurich:20260601T230000
-SUMMARY:crazytable – Jumilla-Abend (Datum noch offen)
-LOCATION:Kirchberg BE
-DESCRIPTION:Monastrell und die Weine der Familie Gil. Datum und Ort bitte anpassen.
+UID:doce-copas-2027@crazytable.ch
+DTSTAMP:20261101T173000Z
+DTSTART;TZID=Europe/Zurich:20270526T183000
+DTEND;TZID=Europe/Zurich:20270526T230000
+SUMMARY:crazytable – Doce Copas (Spanien)
+LOCATION:Kargo68, Zuchwil
+DESCRIPTION:Zwölf spanische Weine mit Vinos de España, kulinarische Begleitung. Details folgen.
+END:VEVENT
+BEGIN:VEVENT
+UID:besenwirtschaft-2027@crazytable.ch
+DTSTAMP:20261101T173000Z
+DTSTART;TZID=Europe/Zurich:20271030T160000
+DTEND;TZID=Europe/Zurich:20271030T230000
+SUMMARY:crazytable – Besenwirtschaft (Württemberg)
+DESCRIPTION:Herbstanlass zur Wildsaison, süddeutsche Weine. Details folgen.
 END:VEVENT
 END:VCALENDAR
