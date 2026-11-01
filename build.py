@@ -123,7 +123,7 @@ INDEX = head('crazytable – Weinclub in Kirchberg BE', 'Weinclub in Kirchberg B
   </div>
   <ol class="rules c6-7">
     <li><span class="n">01</span><h3>Die Idee</h3><p>Gemeinsame Aktivitäten rund um Wein und Weinproduktion. Wir pflegen das regionale Gemeinschaftsgefühl – und der Wein spielt dabei immer die Hauptrolle.</p></li>
-    <li><span class="n">02</span><h3>Die Degustationen</h3><p>Mindestens zwei Abende pro Jahr. Winzerinnen und Winzer stellen ihre Philosophie persönlich vor, mindestens sechs Weine kommen ins Glas – mit passender kulinarischer Begleitung.</p></li>
+    <li><span class="n">02</span><h3>Die Degustationen</h3><p>Zwei Anlässe pro Jahr – mal ein Degustationsabend, mal eine Reise. Jedes Mal ein Thema, mindestens sechs Weine im Glas und Menschen, die sie kennen: Winzer, Importeure, Weinfreunde. Dazu immer ein passendes Essen.</p></li>
     <li><span class="n">03</span><h3>Der Weinkeller</h3><p>Einmal im Jahr entscheiden wir an der Hauptversammlung gemeinsam, welche Trouvaille in den Clubkeller kommt – 20 % der Beiträge, Weine, die wir in ein paar Jahren zusammen öffnen.</p></li>
     <li><span class="n">04</span><h3>Der Verein</h3><p>Gegründet am 1. März 2023 in Kirchberg BE. Maximal 25 Mitglieder, CHF 350 Jahresbeitrag – darin enthalten: zwei Anlässe inklusive Essen und dein Anteil am Keller.</p></li>
   </ol>
