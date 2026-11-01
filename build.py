@@ -314,6 +314,16 @@ WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des We
       </div>
     </article>
     <article class="bottle">
+      <div class="bottle-img">{ph('Flasche – img/giscours.jpg','ratio-45')}<span class="status status-ok">Im Keller · 1 Impériale</span></div>
+      <div class="bottle-body">
+        <span class="meta">Zukauf — Oktober 2023</span>
+        <h3>Château Giscours 2020</h3>
+        <span class="small">Margaux · 3ème Grand Cru Classé · 13,5 %</span>
+        <p>Der Zweitplatzierte der ersten Abstimmung kam doch noch in den Keller – als Impériale mit sechs Litern in der Holzkiste. Eine Flasche für einen besonderen Abend.</p>
+        <dl class="facts"><dt>Format</dt><dd>1 × 600 cl</dd><dt>Einstand</dt><dd>CHF 538.50 (+ CHF 16.15 Porto)</dd><dt>Trinkfenster</dt><dd>ab ca. [2030]</dd></dl>
+      </div>
+    </article>
+    <article class="bottle">
       <div class="bottle-img">{ph('', img='/img/plansel.jpg', alt='Plansel Selecta Grande Escolha 2019')}<span class="status status-ok">Im Keller · 24 Flaschen</span></div>
       <div class="bottle-body">
         <span class="meta">Investment II — HV 2024</span>
@@ -354,6 +364,10 @@ WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des We
       <div class="tl-track"><span class="tl-dot" style="left:0%" title="Kauf 2023"></span><span class="tl-dot" style="left:16.6%" title="Lieferung 2026"></span><span class="tl-wait" style="left:16.6%;width:38.9%"></span><span class="tl-bar" style="left:55.5%;width:44.5%">Trinkfenster ab ca. [2033]</span></div>
     </div>
     <div class="tl-row">
+      <span class="tl-label">Giscours 2020 (6 l)</span>
+      <div class="tl-track"><span class="tl-dot" style="left:0%" title="Kauf 2023"></span><span class="tl-wait" style="left:0%;width:38.9%"></span><span class="tl-bar" style="left:38.9%;width:44.4%">Trinkfenster ab ca. [2030]</span></div>
+    </div>
+    <div class="tl-row">
       <span class="tl-label">Plansel Selecta 2019</span>
       <div class="tl-track"><span class="tl-dot" style="left:5.5%" title="Kauf 2024"></span><span class="tl-bar" style="left:5.5%;width:61.1%">Trinkfenster bis 2035</span></div>
     </div>
@@ -376,7 +390,7 @@ WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des We
       <div class="vote-head"><span class="meta">Hauptversammlung — 6. Mai 2023</span><h3>Vier Kandidaten, ein Bordeaux</h3></div>
       <ol class="candidates">
         <li class="winner"><span class="n">1</span><span class="name">Château Pontet-Canet 2023</span><span class="tag">Gewählt · 18 Flaschen</span></li>
-        <li><span class="n">2</span><span class="name">Château Giscours 2020</span><span class="tag">Grand Cru Classé</span></li>
+        <li><span class="n">2</span><span class="name">Château Giscours 2020</span><span class="tag">Später als Impériale gekauft</span></li>
         <li><span class="n">3</span><span class="name">Caiarossa 2019</span><span class="tag">Toskana</span></li>
         <li><span class="n">4</span><span class="name">Vivaltus 2016</span><span class="tag">Ribera del Duero</span></li>
       </ol>
