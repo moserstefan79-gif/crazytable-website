@@ -294,7 +294,7 @@ WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des We
     <article class="bottle">
       <div class="bottle-img">{ph('', img='/img/quintarelli.jpg', alt='Rosso del Bepi 2016, Giuseppe Quintarelli')}<span class="status status-ok">Im Keller · 12 Flaschen</span></div>
       <div class="bottle-body">
-        <span class="meta">Investment III — HV [2025]</span>
+        <span class="meta">Investment III — HV 2025</span>
         <h3>Rosso del Bepi 2016</h3>
         <span class="small">Giuseppe Quintarelli · IGT Veneto · Corvina, Rondinella, Molinara</span>
         <p>Der «kleine Amarone» des legendären Quintarelli-Hauses in Negrar: Kompott, Gewürz, Tabak, schwarze Kirsche und Pfeffer, 15,5 % – ein Wein, der 15 bis 20 Jahre trägt.</p>
@@ -360,7 +360,7 @@ WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des We
       <p class="small">Factsheets der Kandidaten liegen im <a href="/login" style="text-decoration:underline">Mitgliederbereich</a>.</p>
     </article>
     <article class="vote">
-      <div class="vote-head"><span class="meta">Hauptversammlung — [2025]</span><h3>Ein Klassiker aus dem Veneto</h3></div>
+      <div class="vote-head"><span class="meta">Hauptversammlung — 23. Mai 2025</span><h3>Ein Klassiker aus dem Veneto</h3></div>
       <ol class="candidates">
         <li class="winner"><span class="n">1</span><span class="name">Rosso del Bepi 2016, Giuseppe Quintarelli</span><span class="tag">Gewählt · 12 Flaschen</span></li>
         <li><span class="n">2</span><span class="name">[Kandidat]</span><span class="tag">[Region]</span></li>
