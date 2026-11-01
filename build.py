@@ -62,11 +62,11 @@ IMG = {
     'spanien': 'https://live.staticflickr.com/65535/54111130562_cd2877fe50_h.jpg',
     'suedamerika': 'https://live.staticflickr.com/65535/52874320499_2cf5318c6c_b.jpg',
     'portugal': 'https://live.staticflickr.com/65535/53241396242_9f34a2e731_h.jpg',
-    'bordeaux': 'https://live.staticflickr.com/65535/52875887701_20704ac5eb.jpg',
+    'bordeaux': 'https://live.staticflickr.com/65535/52875887701_20704ac5eb_b.jpg',
     'toskana': 'https://live.staticflickr.com/65535/55625556769_0d6940e498_h.jpg',
     'wild': 'https://live.staticflickr.com/65535/55625496583_50e0652477_h.jpg',
 }
-ALB = {'portugal':'https://www.flickr.com/photos/197768276@N04/albums/72177720311759268','suedamerika':'https://www.flickr.com/photos/197768276@N04/albums/72177720321668673','spanien':'https://www.flickr.com/photos/197768276@N04/albums/72177720326339771','wallis':'https://www.flickr.com/photos/197768276@N04/albums/72177720329907542','toskana':'https://www.flickr.com/photos/197768276@N04/albums/72177720336438916','wild':'https://www.flickr.com/photos/197768276@N04/albums/72177720336449833'}
+ALB = {'bordeaux':'https://www.flickr.com/photos/197768276@N04/albums/72177720308054037','portugal':'https://www.flickr.com/photos/197768276@N04/albums/72177720311759268','suedamerika':'https://www.flickr.com/photos/197768276@N04/albums/72177720321668673','spanien':'https://www.flickr.com/photos/197768276@N04/albums/72177720326339771','wallis':'https://www.flickr.com/photos/197768276@N04/albums/72177720329907542','toskana':'https://www.flickr.com/photos/197768276@N04/albums/72177720336438916','wild':'https://www.flickr.com/photos/197768276@N04/albums/72177720336449833'}
 
 def ph(label, cls='ratio-45', img=None, alt=''):
     if img:
