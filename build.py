@@ -78,7 +78,7 @@ NEXT_EVENT = '''
   <div class="c1-3 stack-sm stack">
     <p class="overline">Nächster Anlass</p>
     <span style="font-family:var(--serif);font-size:72px;line-height:1">26.</span>
-    <span style="font-size:15px;color:var(--text)">Mai 2027 — Mittwoch</span>
+    <span style="font-size:15px;color:var(--text)">Mai 2027 — Mittwoch, 18.30–23 Uhr</span>
     <span style="font-size:15px;color:var(--muted)">Kargo68, Zuchwil / Solothurn</span>
   </div>
   <div class="c4-6 stack">
@@ -108,7 +108,7 @@ INDEX = head('crazytable – Weinclub in Kirchberg BE', 'Weinclub in Kirchberg B
 </section>
 
 <div class="stats">
-  <div class="stat"><b>2</b><span>Degustationen pro Jahr, mit Winzerbesuch und Menü</span></div>
+  <div class="stat"><b>2</b><span>Anlässe pro Jahr – Degustation oder Reise, immer mit Menü</span></div>
   <div class="stat"><b>12+</b><span>neue Weine pro Jahr im Glas</span></div>
   <div class="stat"><b>25</b><span>Mitglieder maximal – der Club bleibt ein Tisch</span></div>
   <div class="stat"><b>20 %</b><span>des Beitrags fliessen in den gemeinsamen Weinkeller</span></div>
