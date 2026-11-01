@@ -66,7 +66,7 @@ IMG = {
     'toskana': 'https://live.staticflickr.com/65535/55625556769_0d6940e498_h.jpg',
     'wild': 'https://live.staticflickr.com/65535/55625496583_50e0652477_h.jpg',
 }
-ALB = {'toskana':'https://www.flickr.com/photos/197768276@N04/albums/72177720336438916','wild':'https://www.flickr.com/photos/197768276@N04/albums/72177720336449833'}
+ALB = {'wallis':'https://www.flickr.com/photos/197768276@N04/albums/72177720329907542','toskana':'https://www.flickr.com/photos/197768276@N04/albums/72177720336438916','wild':'https://www.flickr.com/photos/197768276@N04/albums/72177720336449833'}
 
 def ph(label, cls='ratio-45', img=None, alt=''):
     if img:
