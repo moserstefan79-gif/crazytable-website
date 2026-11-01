@@ -626,10 +626,26 @@ def simple(title, desc, active, h1, body):
 
 DANKE = simple('Danke – crazytable', 'Vielen Dank für deine Nachricht.', '', 'Danke, ist angekommen.',
     '<p>Deine Nachricht ist beim Vorstand eingetroffen. Wir melden uns innert einer Woche.</p><p><a class="link-u" href="/">Zur Startseite</a></p>')
-DISCLAIMER = simple('Disclaimer – crazytable', 'Rechtliche Hinweise.', '', 'Disclaimer',
-    '<p>[Disclaimer-Text von der bisherigen Website hier einsetzen.]</p>')
+DISCLAIMER = simple('Disclaimer – crazytable', 'Rechtliche Hinweise zur Website des Weinclubs crazytable.', '', 'Disclaimer',
+    """<p><strong>Verantwortlich für diese Website</strong><br>Weinclub crazytable, Verein nach Art. 60 ff. ZGB, Kirchberg BE<br>Präsident: Stefan Moser · <a href="mailto:stefan.moser@crazytable.ch" style="text-decoration:underline">stefan.moser@crazytable.ch</a></p>
+<h3>Inhalt</h3><p>Wir bemühen uns um richtige und aktuelle Informationen, übernehmen aber keine Gewähr für Richtigkeit, Vollständigkeit und Aktualität der Inhalte. Angaben zu Anlässen, Weinen, Preisen und Terminen können sich ändern; massgebend sind die Einladungen und Beschlüsse des Vereins. Haftungsansprüche wegen Schäden materieller oder immaterieller Art, die aus dem Zugriff auf diese Website oder der Nutzung der Inhalte entstehen, sind ausgeschlossen.</p>
+<h3>Links</h3><p>Verweise auf Websites Dritter liegen ausserhalb unseres Verantwortungsbereichs. Wir haben keinen Einfluss auf deren Inhalte und lehnen jede Verantwortung dafür ab. Der Zugriff erfolgt auf eigene Verantwortung.</p>
+<h3>Urheberrecht</h3><p>Texte, Bilder und Gestaltung dieser Website gehören dem Weinclub crazytable oder den genannten Rechteinhabern. Verwendung, auch auszugsweise, nur mit schriftlicher Zustimmung. Flaschenbilder und Logos von Weingütern dienen der Information über die Weine und bleiben Eigentum der jeweiligen Produzenten.</p>
+<h3>Alkohol</h3><p>Unsere Anlässe richten sich an Erwachsene. Wein ist ein Genussmittel – wir trinken bewusst und in Massen und empfehlen, zu unseren Anlässen mit dem öffentlichen Verkehr anzureisen.</p>
+<p class="small">Stand: November 2026</p>""")
 DATENSCHUTZ = simple('Datenschutz – crazytable', 'Datenschutzerklärung des Weinclubs crazytable.', '', 'Datenschutz',
-    '<p>[Datenschutzerklärung von der bisherigen Website hier einsetzen. Ergänzen: Formulardaten werden über Netlify Forms verarbeitet und per E-Mail an den Vorstand übermittelt.]</p>')
+    """<p>Der Weinclub crazytable nimmt den Schutz deiner persönlichen Daten ernst. Diese Erklärung beschreibt, welche Daten wir auf crazytable.ch bearbeiten und wozu – nach dem Schweizer Datenschutzgesetz (DSG).</p>
+<h3>Verantwortlich</h3><p>Weinclub crazytable, Kirchberg BE · Präsident Stefan Moser · <a href="mailto:stefan.moser@crazytable.ch" style="text-decoration:underline">stefan.moser@crazytable.ch</a></p>
+<h3>Welche Daten wir bearbeiten</h3>
+<p><strong>Formulare.</strong> Wenn du dich über die Website anmeldest, eine Frage stellst oder eine Idee einreichst, speichern wir die Angaben, die du im Formular machst (bei der Anmeldung: Name, Adresse, Geburtsdatum, E-Mail, Telefon, empfehlendes Mitglied; bei Kontakt und Ideenbox: Name, E-Mail, Nachricht). Wir verwenden sie ausschliesslich für den Vereinszweck: Aufnahme als Mitglied, Beantwortung deiner Anfrage, Planung der Anlässe. Die Formulare werden technisch durch Netlify (Netlify Inc., USA) verarbeitet und an den Vorstand per E-Mail übermittelt; Netlify speichert die Einsendungen für uns. Mitgliederdaten führen wir in der Mitgliederliste des Vereins, die nur dem Vorstand zugänglich ist.</p>
+<p><strong>Server-Logdaten.</strong> Beim Aufruf der Website erfasst unser Hosting-Anbieter Netlify technisch bedingt Daten wie IP-Adresse, Datum und Uhrzeit, aufgerufene Seite und Browsertyp. Diese Daten dienen der Sicherheit und dem Betrieb der Website und werden nicht mit anderen Daten verknüpft.</p>
+<p><strong>Schriften.</strong> Die Website lädt Schriften von Google Fonts (Google LLC). Dabei wird deine IP-Adresse an Google übermittelt.</p>
+<p><strong>Fotos.</strong> An unseren Anlässen fotografieren wir. Ausgewählte Bilder zeigen wir auf dieser Website und in unseren Fotoalben bei Flickr (SmugMug Inc., USA). Wenn du auf einem Bild nicht erscheinen möchtest, sag es uns am Anlass oder schreib uns – wir entfernen das Bild.</p>
+<p><strong>Cookies und Tracking.</strong> Diese Website setzt keine Cookies zu Analyse- oder Werbezwecken und nutzt keine Tracking-Dienste.</p>
+<h3>Weitergabe</h3><p>Wir geben deine Daten nicht an Dritte weiter, ausser an die genannten technischen Dienstleister, soweit das für den Betrieb der Website nötig ist, oder wenn wir gesetzlich dazu verpflichtet sind.</p>
+<h3>Aufbewahrung</h3><p>Anfragen und Ideen löschen wir, sobald sie erledigt sind. Mitgliederdaten bewahren wir für die Dauer der Mitgliedschaft und danach so lange auf, wie das Vereins- und Rechnungswesen es verlangt.</p>
+<h3>Deine Rechte</h3><p>Du kannst jederzeit Auskunft über deine bei uns gespeicherten Daten verlangen, sie berichtigen oder löschen lassen. Schreib dafür an <a href="mailto:stefan.moser@crazytable.ch" style="text-decoration:underline">stefan.moser@crazytable.ch</a>.</p>
+<p class="small">Stand: November 2026. Wir passen diese Erklärung an, wenn sich die Website oder die gesetzlichen Vorgaben ändern.</p>""")
 
 PAGES = {
     'index.html': INDEX, 'anlaesse.html': ANLAESSE, 'weinkeller.html': WEINKELLER, 'verein.html': VEREIN,
