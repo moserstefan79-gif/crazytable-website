@@ -381,10 +381,10 @@ WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des We
     <article class="bottle bottle-next">
       <div class="bottle-img"><div class="ph ratio-45" style="background:var(--black);align-items:center;justify-content:center"><span style="font-family:var(--serif);font-size:120px;color:var(--cyan);letter-spacing:0">?</span></div></div>
       <div class="bottle-body">
-        <span class="meta">Investment IV — HV [2026]</span>
-        <h3>Dein Vorschlag</h3>
-        <p>Welche Trouvaille sollten wir als Nächstes einlagern? Region, Jahrgang, warum – der Vorstand nimmt die besten Vorschläge in die Auswahl.</p>
-        <a class="btn btn-primary" href="/verein#ideenbox" style="align-self:flex-start">Wein vorschlagen</a>
+        <span class="meta">Investment IV — HV 26. Mai 2027</span>
+        <h3>Spanien zur Wahl</h3>
+        <p>Drei Kandidaten, zwei Regionen, drei Handschriften – entschieden wird an der Hauptversammlung im Mai 2027, am Abend von Doce Copas.</p>
+        <a class="btn btn-primary" href="#wahl-2027" style="align-self:flex-start">Die Kandidaten</a>
       </div>
     </article>
   </div>
@@ -411,11 +411,33 @@ WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des We
       <div class="tl-track"><span class="tl-dot" style="left:11.1%" title="Kauf 2025"></span><span class="tl-bar" style="left:11.1%;width:61.1%">Trinkfenster bis ca. 2036</span></div>
     </div>
     <div class="tl-row tl-ghost">
-      <span class="tl-label">Investment IV</span>
-      <div class="tl-track"><span class="tl-dot" style="left:16.6%" title="Kauf 2026"></span><span class="tl-wait" style="left:16.6%;width:83.4%"></span></div>
+      <span class="tl-label">Investment IV (2027)</span>
+      <div class="tl-track"><span class="tl-dot" style="left:22.2%" title="Entscheid Mai 2027"></span><span class="tl-wait" style="left:22.2%;width:77.8%"></span></div>
     </div>
     <div class="tl-legend"><span><i class="lg-dot"></i>Kauf / Lieferung</span><span><i class="lg-wait"></i>Reifen im Keller</span><span><i class="lg-bar"></i>Trinkfenster</span></div>
   </div>
+</section>
+
+<section class="section stack" style="gap:40px">
+  <div class="stack" style="gap:12px" id="wahl-2027"><p class="overline">Nächste Abstimmung</p><h2>Zur Wahl im Mai 2027</h2><p class="lead">Drei spanische Lagerweine, alle mit 15 bis 20 Jahren Potenzial. Preise Stand November 2026, Schweizer Handel.</p></div>
+  <div class="votes">
+    <article class="vote">
+      <div class="vote-head"><span class="meta">Ribera del Duero · ca. CHF 101</span><h3>Alión 2021</h3></div>
+      <p style="font-size:15px;color:var(--text)">100 % Tempranillo aus dem Haus Vega Sicilia – dichter und moderner als der Unico: wildes schwarzes Beerenobst, samtige, kräftige Tannine, sehr langer Abgang. Trinkbar bis 2043. Peñín 96, Parker 96, Suckling 95.</p>
+      <p class="small">Der sichere Kauf: grosse Herkunft, verlässlich lagerfähig.</p>
+    </article>
+    <article class="vote">
+      <div class="vote-head"><span class="meta">Priorat · ca. CHF 95–110</span><h3>Clos Mogador 2019</h3></div>
+      <p style="font-size:15px;color:var(--text)">René Barbiers Gründungswein des modernen Priorat von Schieferterrassen in Gratallops: 45 % Garnacha, 29 % Cariñena, 16 % Syrah, 10 % Cabernet. Dörrobst, Tabak, schwarze Olive, reife Tannine, dunkle Schokolade. Parker 99/100.</p>
+      <p class="small">Der Charakterkopf – ein Wein, den man in zehn Jahren mit Stolz öffnet.</p>
+    </article>
+    <article class="vote">
+      <div class="vote-head"><span class="meta">Priorat · ca. CHF 86</span><h3>Finca Dofí 2022</h3></div>
+      <p style="font-size:15px;color:var(--text)">Álvaro Palacios' Lagenwein aus Garnacha: rote Pflaume, Nelke, Kirsche, Zimt, feine Tannine, lebendige Säure. Reifepotenzial 3 bis 20 Jahre. Parker 96–98.</p>
+      <p class="small">Die elegante, günstigere Variante – mehr Flaschen fürs gleiche Budget.</p>
+    </article>
+  </div>
+  <p class="small">Eigene Vorschläge bis zur Hauptversammlung über die <a href="/verein#ideenbox" style="text-decoration:underline">Ideenbox</a>.</p>
 </section>
 
 <section class="section stack" style="gap:40px">
