@@ -396,10 +396,9 @@ VEREIN = head('Verein & Vorstand – crazytable', 'Vorstand, Hauptversammlung un
 
 <section class="section stack" style="gap:40px;padding-top:24px">
   <h2>Vorstand</h2>
-  <div class="people">
+  <div class="people" style="grid-template-columns:minmax(0,1fr) minmax(0,2fr);align-items:end">
     {person('Stefan Moser','Präsident','stefan.moser@crazytable.ch','Porträt – img/stefan.jpg')}
-    {person('Christian Röthlisberger','Vizepräsident','christian.roethlisberger@crazytable.ch','Porträt – img/christian.jpg')}
-    {person('Antoinette Gyger','Sekretärin','antoinette.gyger@crazytable.ch','Porträt – img/antoinette.jpg')}
+    <p class="lead" style="max-width:none">Der Vorstand führt den Club mit leichter Hand: Jahresprogramm, Weinkeller, Hauptversammlung. Wer mitgestalten will – die Ideenbox ist offen.</p>
   </div>
   <div class="grid-12" style="padding-top:24px;border-top:1px solid var(--line)">
     <h3 class="c1-3" style="font-size:24px">Revisoren</h3>
