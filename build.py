@@ -84,10 +84,9 @@ NEXT_EVENT = '''
   <div class="c4-6 stack">
     <h2 style="font-size:44px">Doce Copas – zwölf Gläser Spanien</h2>
     <p class="lead" style="font-size:17px">Zwölf spanische Weine, ausgesucht mit Vinos de España aus der Region Solothurn, dazu eine kulinarische Begleitung zu jedem Glas – ohne Musik, dafür mit viel Zeit am Tisch.</p>
-    <span class="small">Für Mitglieder · Details und Anmeldung folgen im Frühjahr 2027</span>
+    <span class="small">Für Mitglieder · Details folgen im Frühjahr 2027</span>
   </div>
   <div class="c10-3 stack stack-sm" style="padding-top:6px">
-    <a class="btn btn-dark" href="mailto:stefan.moser@crazytable.ch?subject=Anmeldung%20Degustationsabend">Anmelden</a>
     <a class="btn btn-ghost" href="/termine.ics">In Kalender</a>
     <a class="arrow" href="/anlaesse" style="text-align:center;padding-top:8px">Alle Anlässe →</a>
   </div>
