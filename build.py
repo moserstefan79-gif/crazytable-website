@@ -173,6 +173,22 @@ ANLAESSE = head('Anlässe – crazytable', 'Degustationsabende und Reisen des We
   <div class="c10-3" style="display:flex;justify-content:flex-end"><a class="btn btn-ghost" href="/termine.ics">Termine abonnieren</a></div>
 </section>
 {NEXT_EVENT}
+<section class="section grid-12" style="align-items:start;padding-top:48px">
+  <div class="c1-3 stack-sm stack">
+    <p class="overline">Danach</p>
+    <span style="font-family:var(--serif);font-size:72px;line-height:1">30.</span>
+    <span style="font-size:15px;color:var(--text)">Oktober 2027 — Samstag, 11–18 Uhr</span>
+    <span style="font-size:15px;color:var(--muted)">Kargo68, Zuchwil / Solothurn</span>
+  </div>
+  <div class="c4-6 stack">
+    <h2 style="font-size:44px">Besenwirtschaft – ein Tag Württemberg</h2>
+    <p class="lead" style="font-size:17px">Tagesanlass zur Wildsaison: zwölf süddeutsche Weine wie in einer schwäbischen Besenwirtschaft, dazu passende Küche – und als Vorspiel eine Einkaufsfahrt nach Württemberg.</p>
+    <span class="small">Für Mitglieder · Details folgen</span>
+  </div>
+  <div class="c10-3 stack stack-sm" style="padding-top:6px">
+    <a class="btn btn-ghost" href="/termine.ics">In Kalender</a>
+  </div>
+</section>
 
 <section class="section stack" style="gap:40px">
   <div class="between reveal">

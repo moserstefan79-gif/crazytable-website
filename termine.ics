@@ -16,9 +16,10 @@ END:VEVENT
 BEGIN:VEVENT
 UID:besenwirtschaft-2027@crazytable.ch
 DTSTAMP:20261101T173000Z
-DTSTART;TZID=Europe/Zurich:20271030T160000
-DTEND;TZID=Europe/Zurich:20271030T230000
+DTSTART;TZID=Europe/Zurich:20271030T110000
+DTEND;TZID=Europe/Zurich:20271030T180000
 SUMMARY:crazytable – Besenwirtschaft (Württemberg)
-DESCRIPTION:Herbstanlass zur Wildsaison, süddeutsche Weine. Details folgen.
+LOCATION:Kargo68, Zuchwil
+DESCRIPTION:Tagesanlass 11–18 Uhr zur Wildsaison, süddeutsche Weine. Details folgen.
 END:VEVENT
 END:VCALENDAR
