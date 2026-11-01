@@ -103,8 +103,9 @@ INDEX = head('crazytable – Weinclub in Kirchberg BE', 'Weinclub in Kirchberg B
   <div class="hero-bottom stack stack-lg">
     <p class="lead" style="max-width:480px">Zweimal im Jahr kommen wir zusammen – zu einem Degustationsabend oder einer Reise, mit Weinen aus aller Welt und den Geschichten dahinter. Und Jahr für Jahr wächst unser gemeinsamer Keller voller Trouvaillen.</p>
     <div class="row">
-      <a class="btn btn-primary" href="/mitglied-werden">Mitglied werden</a>
-      <a class="btn btn-outline" href="/anlaesse">Anlässe</a>
+      <a class="btn btn-primary" href="/anlaesse">Anlässe</a>
+      <a class="btn btn-outline" href="/mitglied-werden">Mitglied werden</a>
+      <a class="btn btn-ghost" href="/weinkeller">Weinkeller</a>
     </div>
   </div>
 </section>
