@@ -98,6 +98,7 @@ INDEX = head('crazytable – Weinclub in Kirchberg BE', 'Weinclub in Kirchberg B
   <div class="hero-top stack stack-lg">
     <p class="overline">Weinclub — Kirchberg BE — seit 2023</p>
     <h1>Ein Tisch.<br>Viele Gläser.<br><em class="accent">Gute Geschichten.</em></h1>
+    <img class="bubbles" src="/img/bubbles.png" alt="" aria-hidden="true">
   </div>
   <div class="hero-img">{ph('', img='/img/hero.jpg', alt='Weinkeller mit Barriques und Flaschenregal')}</div>
   <div class="hero-bottom stack stack-lg">
