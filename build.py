@@ -272,7 +272,7 @@ WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des We
   <div class="between reveal"><h2>Im Keller</h2><span class="small">Stand: Hauptversammlung [Mai 2026] — wird jährlich aktualisiert</span></div>
   <div class="bottles">
     <article class="bottle">
-      <div class="bottle-img">{ph('Etikett – img/pontet-canet.jpg','ratio-45')}<span class="status status-ok">In Subskription · Lieferung 2026</span></div>
+      <div class="bottle-img">{ph('', img='/img/pontet-canet.jpg', alt='Château Pontet-Canet, Pauillac')}<span class="status status-ok">In Subskription · Lieferung 2026</span></div>
       <div class="bottle-body">
         <span class="meta">Investment I — HV 2023</span>
         <h3>Château Pontet-Canet 2023</h3>
