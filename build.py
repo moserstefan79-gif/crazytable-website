@@ -292,7 +292,7 @@ WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des We
       </div>
     </article>
     <article class="bottle">
-      <div class="bottle-img">{ph('Etikett – img/quintarelli.jpg','ratio-45')}<span class="status status-ok">Im Keller · 12 Flaschen</span></div>
+      <div class="bottle-img">{ph('', img='/img/quintarelli.jpg', alt='Rosso del Bepi 2016, Giuseppe Quintarelli')}<span class="status status-ok">Im Keller · 12 Flaschen</span></div>
       <div class="bottle-body">
         <span class="meta">Investment III — HV [2025]</span>
         <h3>Rosso del Bepi 2016</h3>
