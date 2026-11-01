@@ -282,13 +282,13 @@ WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des We
       </div>
     </article>
     <article class="bottle">
-      <div class="bottle-img">{ph('Etikett','ratio-45')}<span class="status status-open">Entscheid [offen]</span></div>
+      <div class="bottle-img">{ph('Etikett – img/plansel.jpg','ratio-45')}<span class="status status-ok">Im Keller · 24 Flaschen</span></div>
       <div class="bottle-body">
         <span class="meta">Investment II — HV 2024</span>
-        <h3>[Wein eintragen]</h3>
-        <span class="small">[Region] · [Appellation]</span>
-        <p>Zur Wahl standen drei Portugiesen: Brites Aguiar DOC, Manoella Vinhas Velhas und Plansel Selecta Grande Escolha.</p>
-        <dl class="facts"><dt>Flaschen</dt><dd>[x] × 75 cl</dd><dt>Einstand</dt><dd>[CHF]</dd><dt>Trinkfenster</dt><dd>[ab]</dd></dl>
+        <h3>Plansel Selecta Grande Escolha [Jahrgang]</h3>
+        <span class="small">Quinta da Plansel · Alentejo, Portugal</span>
+        <p>Die grosse Selektion des Hauses Plansel aus Montemor-o-Novo – setzte sich 2024 gegen Brites Aguiar DOC und Manoella Vinhas Velhas durch.</p>
+        <dl class="facts"><dt>Flaschen</dt><dd>24 × 75 cl</dd><dt>Einstand</dt><dd>[CHF]</dd><dt>Trinkfenster</dt><dd>[ab]</dd></dl>
       </div>
     </article>
     <article class="bottle">
@@ -322,8 +322,8 @@ WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des We
       <div class="tl-track"><span class="tl-dot" style="left:0%" title="Kauf 2023"></span><span class="tl-dot" style="left:16.6%" title="Lieferung 2026"></span><span class="tl-wait" style="left:16.6%;width:38.9%"></span><span class="tl-bar" style="left:55.5%;width:44.5%">Trinkfenster ab ca. [2033]</span></div>
     </div>
     <div class="tl-row">
-      <span class="tl-label">[Investment II]</span>
-      <div class="tl-track"><span class="tl-dot" style="left:5.5%" title="Kauf 2024"></span><span class="tl-wait" style="left:5.5%;width:27.8%"></span><span class="tl-bar" style="left:33.3%;width:33.3%">Trinkfenster [ab]</span></div>
+      <span class="tl-label">Plansel Selecta</span>
+      <div class="tl-track"><span class="tl-dot" style="left:5.5%" title="Kauf 2024"></span><span class="tl-wait" style="left:5.5%;width:16.7%"></span><span class="tl-bar" style="left:22.2%;width:38.9%">Trinkfenster ab ca. [2027]</span></div>
     </div>
     <div class="tl-row">
       <span class="tl-label">Rosso del Bepi 2016</span>
@@ -353,11 +353,11 @@ WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des We
     <article class="vote">
       <div class="vote-head"><span class="meta">Hauptversammlung — 25. Mai 2024</span><h3>Drei Portugiesen zur Wahl</h3></div>
       <ol class="candidates">
-        <li><span class="n">1</span><span class="name">Brites Aguiar DOC</span><span class="tag">[Ergebnis]</span></li>
+        <li class="winner"><span class="n">1</span><span class="name">Plansel Selecta Grande Escolha</span><span class="tag">Gewählt · 24 Flaschen</span></li>
         <li><span class="n">2</span><span class="name">Manoella Vinhas Velhas</span><span class="tag">Douro</span></li>
-        <li><span class="n">3</span><span class="name">Plansel Selecta Grande Escolha</span><span class="tag">Alentejo</span></li>
+        <li><span class="n">3</span><span class="name">Brites Aguiar DOC</span><span class="tag">Dão</span></li>
       </ol>
-      <p class="small">Entscheid II: [eintragen, sobald bestätigt]</p>
+      <p class="small">Factsheets der Kandidaten liegen im <a href="/login" style="text-decoration:underline">Mitgliederbereich</a>.</p>
     </article>
     <article class="vote">
       <div class="vote-head"><span class="meta">Hauptversammlung — [2025]</span><h3>Ein Klassiker aus dem Veneto</h3></div>
