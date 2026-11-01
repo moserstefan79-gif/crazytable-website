@@ -384,7 +384,8 @@ WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des We
 """ + FOOTER
 
 def person(name, role, mail, img):
-    return f'<article class="person">{ph(img,"ratio-11")}<div class="stack-sm stack" style="gap:4px"><h3>{name}</h3><span class="role">{role}</span><a href="mailto:{mail}">{mail}</a></div></article>'
+    pic = ph('', 'ratio-11', img=img, alt=name) if img.startswith('/') else ph(img, 'ratio-11')
+    return f'<article class="person">{pic}<div class="stack-sm stack" style="gap:4px"><h3>{name}</h3><span class="role">{role}</span><a href="mailto:{mail}">{mail}</a></div></article>'
 
 VEREIN = head('Verein & Vorstand – crazytable', 'Vorstand, Hauptversammlung und Ideenbox des Weinclubs crazytable in Kirchberg BE.', 'verein') + f'''
 <div class="wrap" style="padding:0">
@@ -397,7 +398,7 @@ VEREIN = head('Verein & Vorstand – crazytable', 'Vorstand, Hauptversammlung un
 <section class="section stack" style="gap:40px;padding-top:24px">
   <h2>Vorstand</h2>
   <div class="people" style="grid-template-columns:minmax(0,1fr) minmax(0,2fr);align-items:end">
-    {person('Stefan Moser','Präsident','stefan.moser@crazytable.ch','Porträt – img/stefan.jpg')}
+    {person('Stefan Moser','Präsident','stefan.moser@crazytable.ch','/img/stefan.jpg')}
     <p class="lead" style="max-width:none">Der Vorstand führt den Club mit leichter Hand: Jahresprogramm, Weinkeller, Hauptversammlung. Wer mitgestalten will – die Ideenbox ist offen.</p>
   </div>
   <div class="grid-12" style="padding-top:24px;border-top:1px solid var(--line)">
