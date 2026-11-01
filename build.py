@@ -58,7 +58,7 @@ FOOTER = '''</main>
 
 # Flickr-Vorschaubilder der bestehenden Alben (eigene Fotos des Clubs)
 IMG = {
-    'wallis': 'https://live.staticflickr.com/65535/54879793212_f921fb6741.jpg',
+    'wallis': 'https://live.staticflickr.com/65535/54880879188_05c9672cb7_h.jpg',
     'spanien': 'https://live.staticflickr.com/65535/54541440649_02e9fe1948.jpg',
     'suedamerika': 'https://live.staticflickr.com/65535/54112318980_703b5bc41b.jpg',
     'portugal': 'https://live.staticflickr.com/65535/53241396242_a99cd38c2a.jpg',
