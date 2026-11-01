@@ -314,7 +314,7 @@ WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des We
       </div>
     </article>
     <article class="bottle">
-      <div class="bottle-img">{ph('Flasche – img/giscours.jpg','ratio-45')}<span class="status status-ok">Im Keller · 1 Impériale</span></div>
+      <div class="bottle-img">{ph('', img='/img/giscours.jpg', alt='Château Giscours, Margaux')}<span class="status status-ok">Im Keller · 1 Impériale</span></div>
       <div class="bottle-body">
         <span class="meta">Zukauf — Oktober 2023</span>
         <h3>Château Giscours 2020</h3>
