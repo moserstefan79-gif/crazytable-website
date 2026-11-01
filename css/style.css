@@ -298,3 +298,11 @@ em.accent{font-style:italic;color:var(--green)}
   .band-green h2{font-size:38px}
   .cellar-rule .k{font-size:26px}
 }
+
+/* Mehr zum Weingut */
+.more{margin-top:10px;border-top:1px solid var(--line);padding-top:10px}
+.more summary{cursor:pointer;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--green);list-style:none;display:flex;align-items:center;gap:8px}
+.more summary::-webkit-details-marker{display:none}
+.more summary::before{content:"+";font-family:var(--serif);font-size:18px;line-height:1}
+.more[open] summary::before{content:"–"}
+.more p{margin:10px 0 0;font-size:14px;line-height:1.6;color:var(--text)}

@@ -311,6 +311,7 @@ WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des We
         <span class="small">Pauillac, Bordeaux · 5ème Grand Cru Classé · biodynamisch</span>
         <p>Im Gründungsjahr en primeur gekauft. 2026 kommt die Lieferung – dann entscheiden wir: ein paar Flaschen öffnen oder alles weiter liegen lassen.</p>
         <dl class="facts"><dt>Flaschen</dt><dd>18 × 75 cl</dd><dt>Einstand</dt><dd>[CHF]</dd><dt>Trinkfenster</dt><dd>ab ca. [2033]</dd></dl>
+        <details class="more"><summary>Mehr zum Weingut</summary><p>Pontet-Canet gehört seit 1975 der Familie Tesseron; Alfred Tesseron führt das Gut seit 1994. 81 Hektar in Pauillac, rund 62 % Cabernet Sauvignon und 32 % Merlot. Seit 2004 wird biodynamisch gearbeitet – als erstes grosses Bordeaux-Gut mit Bio-Zertifikat (2010) und seit Jahrgang 2014 Demeter. Ein Teil der Reben wird mit Pferden gepflügt, ein Teil des Weins reift in Amphoren aus dem eigenen Boden. Im Glas: ein Fünfter Cru, der regelmässig mit den Zweiten gemessen wird.</p></details>
       </div>
     </article>
     <article class="bottle">
@@ -321,6 +322,7 @@ WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des We
         <span class="small">Margaux · 3ème Grand Cru Classé · 13,5 %</span>
         <p>Der Zweitplatzierte der ersten Abstimmung kam doch noch in den Keller – als Impériale mit sechs Litern in der Holzkiste. Eine Flasche für einen besonderen Abend.</p>
         <dl class="facts"><dt>Format</dt><dd>1 × 600 cl</dd><dt>Einstand</dt><dd>CHF 538.50</dd><dt>Trinkfenster</dt><dd>ab ca. [2030]</dd></dl>
+        <details class="more"><summary>Mehr zum Weingut</summary><p>Giscours ist eines der ältesten Güter des Médoc – erstmals 1330 erwähnt, Wein seit 1552, Dritter Cru der Klassifikation von 1855. 102 Hektar in Margaux, rund 65 % Cabernet Sauvignon und 30 % Merlot, mit alten Reben, teils von 1926. Seit 1995 gehört es der niederländischen Familie Albada Jelgersma, die nach langem Rechtsstreit seit Ende 2023 Alleineigentümerin ist. Die Impériale mit sechs Litern reift langsamer als die Normalflasche – gut für einen Wein, der auf einen besonderen Abend wartet.</p></details>
       </div>
     </article>
     <article class="bottle">
@@ -331,6 +333,7 @@ WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des We
         <span class="small">Quinta da Plansel · Alentejo · Touriga Nacional, Tinta Barroca, Touriga Franca</span>
         <p>Das Flaggschiff der Quinta da Plansel: handverlesene Trauben alter Reben, 24 Monate in neuen Barriques, 16 % – sehr dunkel, reife Wald- und Beerenfrüchte, tiefgründige Würze. Setzte sich 2024 gegen Brites Aguiar und Manoella Vinhas Velhas durch.</p>
         <dl class="facts"><dt>Flaschen</dt><dd>24 × 75 cl</dd><dt>Einstand</dt><dd>CHF 76.50 (CHF 1'836 total)</dd><dt>Trinkfenster</dt><dd>jetzt bis ca. 2035</dd></dl>
+        <details class="more"><summary>Mehr zum Weingut</summary><p>Hinter der Quinta da Plansel in Montemor-o-Novo, rund 100 km östlich von Lissabon, steht eine deutsch-portugiesische Familiengeschichte: Jorge Böhm aus der Pfalz kam über ein Schiffsunglück vor der portugiesischen Küste zum Wein, kaufte 1975 die Quinta de São Jorge und erforschte die einheimischen Rebsorten. Seine Tochter Dorina Lindemann gründete 1997 das Weingut und setzte als eine der Ersten im Süden auf reinsortige Touriga Nacional. Rund 65 Hektar, vor allem Rotwein; der Grande Escolha ist das Flaggschiff aus den besten Parzellen alter Reben.</p></details>
       </div>
     </article>
     <article class="bottle">
@@ -341,6 +344,7 @@ WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des We
         <span class="small">Giuseppe Quintarelli · IGT Veneto · Corvina, Rondinella, Molinara</span>
         <p>Der «kleine Amarone» des legendären Quintarelli-Hauses in Negrar: Kompott, Gewürz, Tabak, schwarze Kirsche und Pfeffer, 15,5 % – ein Wein, der 15 bis 20 Jahre trägt.</p>
         <dl class="facts"><dt>Flaschen</dt><dd>12 × 75 cl</dd><dt>Einstand</dt><dd>CHF 155 (CHF 1'860 total)</dd><dt>Trinkfenster</dt><dd>jetzt bis ca. 2036</dd></dl>
+        <details class="more"><summary>Mehr zum Weingut</summary><p>Giuseppe «Bepi» Quintarelli (1927–2012) machte das 1924 von seinem Vater gegründete Gut in Negrar zur Legende des Valpolicella: handgeschriebene Etiketten, Amarone mit mindestens sieben Jahren im grossen Holz, Riserva zehn – und in Jahren, die ihm nicht genügten, gab es schlicht keinen Amarone. Genau dann entsteht der Rosso del Bepi: dieselben getrockneten Trauben, dieselbe Zeit im Fass, nur ohne die Bezeichnung. Heute führen Tochter Fiorenza, ihr Mann Giampaolo Grigoli und die Enkel Francesco und Lorenzo das Haus.</p></details>
       </div>
     </article>
     <article class="bottle bottle-next">
