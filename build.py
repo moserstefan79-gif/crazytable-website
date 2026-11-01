@@ -282,7 +282,7 @@ WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des We
       </div>
     </article>
     <article class="bottle">
-      <div class="bottle-img">{ph('Etikett – img/plansel.jpg','ratio-45')}<span class="status status-ok">Im Keller · 24 Flaschen</span></div>
+      <div class="bottle-img">{ph('', img='/img/plansel.jpg', alt='Plansel Selecta Grande Escolha 2019')}<span class="status status-ok">Im Keller · 24 Flaschen</span></div>
       <div class="bottle-body">
         <span class="meta">Investment II — HV 2024</span>
         <h3>Plansel Selecta Grande Escolha 2019</h3>
