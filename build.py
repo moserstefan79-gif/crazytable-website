@@ -91,7 +91,7 @@ NEXT_EVENT = '''
   </div>
 </section>'''
 
-INDEX = head('crazytable – Weinclub in Kirchberg BE', 'Weinclub in Kirchberg BE: zwei Degustationen pro Jahr, Winzer persönlich kennenlernen, gemeinsamer Weinkeller. Maximal 50 Mitglieder.', 'home') + f'''
+INDEX = head('crazytable – Weinclub in Kirchberg BE', 'Weinclub in Kirchberg BE: zwei Degustationen pro Jahr, Winzer persönlich kennenlernen, gemeinsamer Weinkeller. Maximal 25 Mitglieder.', 'home') + f'''
 <section class="hero grid-12" style="border-bottom:1px solid var(--line);max-width:1280px;margin:0 auto">
   <div class="c1-7 stack stack-lg">
     <p class="overline">Weinclub — Kirchberg BE — seit 2023</p>
@@ -108,7 +108,7 @@ INDEX = head('crazytable – Weinclub in Kirchberg BE', 'Weinclub in Kirchberg B
 <div class="stats">
   <div class="stat"><b>2</b><span>Degustationen pro Jahr, mit Winzerbesuch und Menü</span></div>
   <div class="stat"><b>12+</b><span>neue Weine pro Jahr im Glas</span></div>
-  <div class="stat"><b>50</b><span>Mitglieder maximal – der Club bleibt ein Tisch</span></div>
+  <div class="stat"><b>25</b><span>Mitglieder maximal – der Club bleibt ein Tisch</span></div>
   <div class="stat"><b>20 %</b><span>des Beitrags fliessen in den gemeinsamen Weinkeller</span></div>
 </div>
 
@@ -123,7 +123,7 @@ INDEX = head('crazytable – Weinclub in Kirchberg BE', 'Weinclub in Kirchberg B
     <li><span class="n">01</span><h3>Die Idee</h3><p>Gemeinsame Aktivitäten rund um Wein und Weinproduktion. Wir pflegen das regionale Gemeinschaftsgefühl – und der Wein spielt dabei immer die Hauptrolle.</p></li>
     <li><span class="n">02</span><h3>Die Degustationen</h3><p>Mindestens zwei Abende pro Jahr. Winzerinnen und Winzer stellen ihre Philosophie persönlich vor, mindestens sechs Weine kommen ins Glas – mit passender kulinarischer Begleitung.</p></li>
     <li><span class="n">03</span><h3>Der Weinkeller</h3><p>Einmal im Jahr entscheiden wir an der Hauptversammlung gemeinsam, welche Trouvaille in den Clubkeller kommt – 20 % der Beiträge, Weine, die wir in ein paar Jahren zusammen öffnen.</p></li>
-    <li><span class="n">04</span><h3>Der Verein</h3><p>Gegründet am 1. März 2023 in Kirchberg BE. Maximal 50 Mitglieder, CHF 350 Jahresbeitrag – darin enthalten: zwei Anlässe inklusive Essen und dein Anteil am Keller.</p></li>
+    <li><span class="n">04</span><h3>Der Verein</h3><p>Gegründet am 1. März 2023 in Kirchberg BE. Maximal 25 Mitglieder, CHF 350 Jahresbeitrag – darin enthalten: zwei Anlässe inklusive Essen und dein Anteil am Keller.</p></li>
   </ol>
 </section>
 
@@ -392,7 +392,7 @@ VEREIN = head('Verein & Vorstand – crazytable', 'Vorstand, Hauptversammlung un
 <section class="section stack" style="padding-top:72px;padding-bottom:56px;max-width:860px;border-bottom:0">
   <p class="overline">Verein</p>
   <h1 style="font-size:clamp(44px,6vw,80px)">Ein kleiner Verein mit einem grossen Tisch</h1>
-  <p class="lead" style="max-width:none">Der Weinclub crazytable wurde am 1. März 2023 in Kirchberg BE gegründet. Wir sind bewusst klein: maximal 50 Mitglieder, damit an unseren Abenden alle am selben Tisch sitzen.</p>
+  <p class="lead" style="max-width:none">Der Weinclub crazytable wurde am 1. März 2023 in Kirchberg BE gegründet. Wir sind bewusst klein: maximal 25 Mitglieder, damit an unseren Abenden alle am selben Tisch sitzen.</p>
 </section>
 
 <section class="section stack" style="gap:40px;padding-top:24px">
@@ -464,7 +464,7 @@ MITGLIED = head('Mitglied werden – crazytable', 'Mitglied werden im Weinclub c
       <div><span>Degustationsabende inkl. Menü</span><strong>2 pro Jahr</strong></div>
       <div><span>Neue Weine im Glas</span><strong>mindestens 12</strong></div>
       <div><span>Anteil am Clubkeller</span><strong>20 % des Beitrags</strong></div>
-      <div><span>Mitglieder</span><strong>max. 50</strong></div>
+      <div><span>Mitglieder</span><strong>max. 25</strong></div>
     </div>
     <p class="small" style="line-height:1.6">Noch Fragen, aber (noch) kein Mitglied? Schreib uns über das <a href="#kontakt" style="text-decoration:underline">Kontaktformular</a> oder direkt an <a href="mailto:stefan.moser@crazytable.ch" style="text-decoration:underline">stefan.moser@crazytable.ch</a>.</p>
   </div>
