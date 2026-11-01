@@ -458,8 +458,8 @@ VEREIN = head('Verein & Vorstand – crazytable', 'Vorstand, Hauptversammlung un
   <div class="c1-5 stack">
     <p class="overline">Hauptversammlung</p>
     <h2 style="font-size:40px">Einmal im Jahr: Rechnung, Programm – und der Kellerentscheid</h2>
-    <p style="color:var(--text)">Die Hauptversammlung findet jeweils vor einem Degustationsabend statt. Wer nicht dabei sein kann, stimmt vorab schriftlich ab – und kann die Weine des Abends in den zehn Tagen danach mit 20 % Rabatt bestellen.</p>
-    <div class="row"><a class="btn btn-ghost" href="/statuten.pdf">Statuten (PDF)</a><a class="btn btn-ghost" href="mailto:stefan.moser@crazytable.ch?subject=Schriftliche%20Abstimmung%20HV">Schriftlich abstimmen</a></div>
+    <p style="color:var(--text)">Die Hauptversammlung findet jeweils vor einem Degustationsabend statt. Wer am Abend nicht dabei sein kann, kann die Weine in den zehn Tagen danach mit 20 % Rabatt bestellen.</p>
+    <div class="row"><a class="btn btn-ghost" href="/statuten.pdf">Statuten (PDF)</a></div>
   </div>
   <ol class="agenda c7-6">
     <li><span class="n">a</span>Wahl des Vorstandes und der Revisoren</li>
