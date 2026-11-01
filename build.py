@@ -98,7 +98,7 @@ INDEX = head('crazytable – Weinclub in Kirchberg BE', 'Weinclub in Kirchberg B
   <div class="c1-7 stack stack-lg">
     <p class="overline">Weinclub — Kirchberg BE — seit 2023</p>
     <h1>Ein Tisch.<br>Viele Gläser.<br><em class="accent">Gute Geschichten.</em></h1>
-    <p class="lead" style="max-width:480px">Zweimal im Jahr lernen wir Winzerinnen und Winzer persönlich kennen, degustieren Weine aus aller Welt und bauen gemeinsam einen Keller voller Trouvaillen auf.</p>
+    <p class="lead" style="max-width:480px">Zweimal im Jahr kommen wir zusammen – zu einem Degustationsabend oder einer Reise, mit Weinen aus aller Welt und den Geschichten dahinter. Und Jahr für Jahr wächst unser gemeinsamer Keller voller Trouvaillen.</p>
     <div class="row">
       <a class="btn btn-primary" href="/mitglied-werden">Mitglied werden</a>
       <a class="btn btn-outline" href="/anlaesse">Anlässe</a>
