@@ -1,0 +1,11 @@
+# Alte Clubdesk-Adressen -> neue Seiten
+/willkommen                     /                    301
+/willkommen/weinkeller          /weinkeller          301
+/willkommen/hauptversammlung    /verein#hauptversammlung 301
+/vorstand                       /verein              301
+/degustationsabende             /anlaesse            301
+/kontakt                        /mitglied-werden     301
+/clubdesk/*                     /                    301
+
+# Später: Login auf die Weinclub-Plattform zeigen lassen, z. B.
+# /login   https://app.crazytable.ch/login   302

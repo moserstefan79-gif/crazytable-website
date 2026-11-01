@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mitglied werden – crazytable</title>
+<meta name="description" content="Mitglied werden im Weinclub crazytable: CHF 350 pro Jahr, zwei Degustationen inklusive Menü, Anteil am Clubkeller. Aufnahme auf Empfehlung.">
+<meta property="og:title" content="Mitglied werden – crazytable">
+<meta property="og:description" content="Mitglied werden im Weinclub crazytable: CHF 350 pro Jahr, zwei Degustationen inklusive Menü, Anteil am Clubkeller. Aufnahme auf Empfehlung.">
+<meta property="og:type" content="website">
+<link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+<script src="/js/main.js" defer></script>
+</head>
+<body>
+<div class="site-header-bar"><header class="site-header">
+  <a class="logo" href="/" aria-label="crazytable – Startseite"><img src="/img/logo-wordmark.png" alt="crazytable"></a>
+  <button class="nav-toggle" aria-label="Menü öffnen" aria-expanded="false" onclick="var n=document.getElementById('nav');n.classList.toggle('is-open');this.setAttribute('aria-expanded',n.classList.contains('is-open'))"><span></span><span></span><span></span></button>
+  <nav class="nav" id="nav" aria-label="Hauptnavigation">
+    <a href="/verein">Verein</a>
+    <a href="/anlaesse">Anlässe</a>
+    <a href="/weinkeller">Weinkeller</a>
+    <a href="/login" class="nav-muted">Login</a>
+    <a href="/mitglied-werden" class="nav-cta">Mitglied werden</a>
+  </nav>
+</header></div>
+<main>
+
+<div class="wrap" style="padding:0">
+<section class="section grid-12" style="padding-top:72px;align-items:start">
+  <div class="c1-5 stack stack-lg">
+    <div class="stack">
+      <p class="overline">Mitglied werden</p>
+      <h1 style="font-size:clamp(44px,6vw,72px)">Nimm Platz am <em class="accent">verrückten Tisch.</em></h1>
+      <p class="lead">Wir nehmen neue Mitglieder auf Empfehlung eines bestehenden Mitglieds auf – solange Platz am Tisch ist.</p>
+    </div>
+    <div class="terms">
+      <div><span>Jahresbeitrag</span><b>CHF 350</b></div>
+      <div><span>Degustationsabende inkl. Menü</span><strong>2 pro Jahr</strong></div>
+      <div><span>Neue Weine im Glas</span><strong>mindestens 12</strong></div>
+      <div><span>Anteil am Clubkeller</span><strong>20 % des Beitrags</strong></div>
+      <div><span>Mitglieder</span><strong>max. 50</strong></div>
+    </div>
+    <p class="small" style="line-height:1.6">Noch Fragen, aber (noch) kein Mitglied? Schreib uns über das <a href="#kontakt" style="text-decoration:underline">Kontaktformular</a> oder direkt an <a href="mailto:stefan.moser@crazytable.ch" style="text-decoration:underline">stefan.moser@crazytable.ch</a>.</p>
+  </div>
+  <form class="form c7-6" name="anmeldung" method="POST" action="/danke" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="anmeldung">
+    <p class="hidden"><label>Nicht ausfüllen: <input name="bot-field"></label></p>
+    <h2 style="font-size:36px;margin-bottom:8px">Anmeldung</h2>
+    <div class="form-2">
+      <div class="field"><label for="a-vn">Vorname *</label><input id="a-vn" name="vorname" type="text" required></div>
+      <div class="field"><label for="a-nn">Nachname *</label><input id="a-nn" name="nachname" type="text" required></div>
+    </div>
+    <div class="field"><label for="a-adr">Adresse *</label><input id="a-adr" name="adresse" type="text" required></div>
+    <div class="form-2">
+      <div class="field"><label for="a-plz">PLZ / Ort *</label><input id="a-plz" name="plz_ort" type="text" required></div>
+      <div class="field"><label for="a-geb">Geburtsdatum *</label><input id="a-geb" name="geburtsdatum" type="date" required></div>
+    </div>
+    <div class="form-2">
+      <div class="field"><label for="a-em">E-Mail *</label><input id="a-em" name="email" type="email" required></div>
+      <div class="field"><label for="a-tel">Telefon *</label><input id="a-tel" name="telefon" type="tel" required></div>
+    </div>
+    <div class="field"><label for="a-emp">Auf Empfehlung von *</label><input id="a-emp" name="empfehlung" type="text" placeholder="Name des Mitglieds" required></div>
+    <div class="field"><label for="a-msg">Bemerkung</label><textarea id="a-msg" name="bemerkung" rows="3"></textarea></div>
+    <label class="check"><input type="checkbox" name="datenschutz" value="ja" required><span>Ich habe die <a href="/datenschutz">Datenschutzerklärung</a> gelesen und bin mit der Aufnahme in die Mitgliederliste einverstanden.</span></label>
+    <button class="btn btn-primary" type="submit">Anmeldung abschicken</button>
+    <span class="small" style="text-align:center">Der Vorstand meldet sich innert einer Woche.</span>
+  </form>
+</section>
+
+<section class="section grid-12" id="kontakt" style="border-bottom:0">
+  <div class="c1-5 stack">
+    <p class="overline">Kontakt</p>
+    <h2 style="font-size:40px">Eine Frage an den Verein?</h2>
+    <p style="color:var(--text)">Für alles, was keine Anmeldung ist: Fragen zum Club, zu Anlässen oder zum Weinkeller.</p>
+  </div>
+  <form class="form c7-6" name="kontakt" method="POST" action="/danke" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="kontakt">
+    <p class="hidden"><label>Nicht ausfüllen: <input name="bot-field"></label></p>
+    <div class="form-2">
+      <div class="field"><label for="k-vn">Vorname</label><input id="k-vn" name="vorname" type="text" required></div>
+      <div class="field"><label for="k-nn">Nachname</label><input id="k-nn" name="nachname" type="text" required></div>
+    </div>
+    <div class="field"><label for="k-em">E-Mail</label><input id="k-em" name="email" type="email" required></div>
+    <div class="field"><label for="k-msg">Nachricht</label><textarea id="k-msg" name="nachricht" rows="4" required></textarea></div>
+    <button class="btn btn-outline" type="submit" style="align-self:flex-start">Nachricht senden</button>
+  </form>
+</section>
+</div>
+</main>
+<div class="site-footer-bar"><footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <img src="/img/logo-wordmark.png" alt="crazytable" style="width:170px;height:auto">
+      <span style="color:#9A9E9E;line-height:1.6">Weinclub crazytable<br>Kirchberg BE</span>
+    </div>
+    <div><span class="h">Club</span><a href="/verein">Verein &amp; Vorstand</a><a href="/anlaesse">Anlässe</a><a href="/weinkeller">Weinkeller</a></div>
+    <div><span class="h">Mitmachen</span><a href="/mitglied-werden">Mitglied werden</a><a href="/verein#ideenbox">Ideenbox</a><a href="/login">Mitglieder-Login</a></div>
+    <div><span class="h">Kontakt</span><a href="mailto:stefan.moser@crazytable.ch">stefan.moser@crazytable.ch</a><a href="/mitglied-werden#kontakt">Kontaktformular</a></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 crazytable</span>
+    <div><a href="/disclaimer">Disclaimer</a><a href="/datenschutz">Datenschutz</a></div>
+  </div>
+</footer></div>
+</body>
+</html>
