@@ -30,6 +30,7 @@ def head(title, desc, active):
     <a href="/verein"{' class="is-active"' if active=='verein' else ''}>Verein</a>
     <a href="/anlaesse"{' class="is-active"' if active=='anlaesse' else ''}>Anlässe</a>
     <a href="/weinkeller"{' class="is-active"' if active=='weinkeller' else ''}>Weinkeller</a>
+    <a href="https://app.crazytable.ch" class="nav-muted">Login</a>
     <a href="/mitglied-werden" class="nav-cta">Mitglied werden</a>
   </nav>
 </header></div>
@@ -44,7 +45,7 @@ FOOTER = '''</main>
       <span style="color:#9A9E9E;line-height:1.6">Weinclub crazytable<br>Kirchberg BE</span>
     </div>
     <div><span class="h">Club</span><a href="/verein">Verein &amp; Vorstand</a><a href="/anlaesse">Anlässe</a><a href="/weinkeller">Weinkeller</a></div>
-    <div><span class="h">Mitmachen</span><a href="/mitglied-werden">Mitglied werden</a><a href="/verein#ideenbox">Ideenbox</a><a href="/mitglied-werden#kontakt">Kontakt</a></div>
+    <div><span class="h">Mitmachen</span><a href="/mitglied-werden">Mitglied werden</a><a href="/verein#ideenbox">Ideenbox</a><a href="https://app.crazytable.ch">Mitglieder-Login</a></div>
     <div><span class="h">Kontakt</span><a href="mailto:stefan.moser@crazytable.ch">stefan.moser@crazytable.ch</a><a href="/mitglied-werden#kontakt">Kontaktformular</a></div>
   </div>
   <div class="footer-bottom">
@@ -88,6 +89,7 @@ NEXT_EVENT = '''
   </div>
   <div class="c10-3 stack stack-sm" style="padding-top:6px">
     <a class="btn btn-dark" href="/anlaesse#doce-copas">Mehr Informationen</a>
+    <a class="btn btn-ghost" href="https://app.crazytable.ch/app">Anmelden (Mitglieder)</a>
     <a class="btn btn-ghost" href="/termine.ics">In Kalender</a>
     <a class="arrow" href="/anlaesse" style="text-align:center;padding-top:8px">Alle Anlässe →</a>
   </div>

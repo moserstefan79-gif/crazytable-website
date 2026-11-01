@@ -6,3 +6,4 @@
 /degustationsabende             /anlaesse            301
 /kontakt                        /mitglied-werden     301
 /clubdesk/*                     /                    301
+/login    https://app.crazytable.ch    302
