@@ -94,17 +94,19 @@ NEXT_EVENT = '''
 </section>'''
 
 INDEX = head('crazytable – Weinclub in Kirchberg BE', 'Weinclub in Kirchberg BE: zwei Degustationen pro Jahr, Winzer persönlich kennenlernen, gemeinsamer Weinkeller. Maximal 25 Mitglieder.', 'home') + f'''
-<section class="hero grid-12" style="border-bottom:1px solid var(--line);max-width:1280px;margin:0 auto">
-  <div class="c1-7 stack stack-lg">
+<section class="hero hero-grid" style="border-bottom:1px solid var(--line);max-width:1280px;margin:0 auto">
+  <div class="hero-top stack stack-lg">
     <p class="overline">Weinclub — Kirchberg BE — seit 2023</p>
     <h1>Ein Tisch.<br>Viele Gläser.<br><em class="accent">Gute Geschichten.</em></h1>
+  </div>
+  <div class="hero-img">{ph('', img='/img/hero.jpg', alt='Weinkeller mit Barriques und Flaschenregal')}</div>
+  <div class="hero-bottom stack stack-lg">
     <p class="lead" style="max-width:480px">Zweimal im Jahr kommen wir zusammen – zu einem Degustationsabend oder einer Reise, mit Weinen aus aller Welt und den Geschichten dahinter. Und Jahr für Jahr wächst unser gemeinsamer Keller voller Trouvaillen.</p>
     <div class="row">
       <a class="btn btn-primary" href="/mitglied-werden">Mitglied werden</a>
       <a class="btn btn-outline" href="/anlaesse">Anlässe</a>
     </div>
   </div>
-  <div class="c8-5">{ph('', img='/img/hero.jpg', alt='Weinkeller mit Barriques und Flaschenregal')}</div>
 </section>
 
 <div class="stats">
