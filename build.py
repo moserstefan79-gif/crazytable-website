@@ -83,7 +83,7 @@ NEXT_EVENT = '''
   </div>
   <div class="c4-6 stack">
     <h2 style="font-size:44px">Doce Copas – zwölf Gläser Spanien</h2>
-    <p class="lead" style="font-size:17px">Zwölf spanische Weine, ausgesucht mit Vinos de España aus der Region Solothurn, dazu eine kulinarische Begleitung zu jedem Glas – ohne Musik, dafür mit viel Zeit am Tisch.</p>
+    <p class="lead" style="font-size:17px">Zwölf spanische Weine, ausgesucht mit Vinos de España aus der Region Solothurn, dazu eine kulinarische Begleitung zu jedem Glas und viel Zeit am Tisch.</p>
     <span class="small">Für Mitglieder · Details folgen im Frühjahr 2027</span>
   </div>
   <div class="c10-3 stack stack-sm" style="padding-top:6px">
@@ -202,7 +202,7 @@ ANLAESSE = head('Anlässe – crazytable', 'Degustationsabende und Reisen des We
     </div>
     <div class="c6-7 prose" style="font-size:16px">
       <p>Zwölf Gläser, zwölf spanische Weine – vom Schaumwein über Weissweine bis zu kellerfähigen Roten aus verschiedenen Regionen. Die Auswahl treffen wir zusammen mit Vinos de España aus der Region Solothurn, die uns die Weine und die Geschichten dazu mitbringen.</p>
-      <p>Anders als bei unseren Musik-Abenden steht diesmal die Küche im Zentrum: Zu jedem Glas gibt es eine kleine, passende kulinarische Begleitung, serviert am langen Tisch im Kargo68. Kein Quiz, keine Hektik – Wein für Wein, mit Zeit zum Vergleichen und Fachsimpeln.</p>
+      <p>Die Küche steht im Zentrum: Zu jedem Glas gibt es eine kleine, passende kulinarische Begleitung, serviert am langen Tisch im Kargo68. Kein Quiz, keine Hektik – Wein für Wein, mit Zeit zum Vergleichen und Fachsimpeln.</p>
       <p>Offen ist noch, welche Regionen den Schwerpunkt bilden und ob ein Wein des Abends als Kandidat für den Clubkeller ins Rennen geht. Vorschläge gern über die Ideenbox.</p>
     </div>
   </article>
