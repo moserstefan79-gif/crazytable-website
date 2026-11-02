@@ -318,6 +318,54 @@ ANLAESSE = head('Anlässe – crazytable', 'Degustationsabende und Reisen des We
 </div>
 ''' + FOOTER
 
+
+# ---------- Wertentwicklung Weinkeller ----------
+# Einstand = bezahlter Preis pro Einheit; markt = Richtwert Schweizer Händlerpreis inkl. MwSt (Stand Nov 2026). None = noch offen.
+WERT = [
+    dict(name='Château Pontet-Canet 2023', sub='Pauillac · Investment I', n=18, unit='Fl.', einstand=None, markt=84.0, quelle='Händler CH, Nov 2026'),
+    dict(name='Château Giscours 2020, Impériale', sub='Margaux · 6 Liter', n=1, unit='Impériale', einstand=538.50, markt=580.0, quelle='Schätzung aus 75-cl-Preis + Formatzuschlag'),
+    dict(name='Plansel Selecta Grande Escolha 2019', sub='Alentejo · Investment II', n=24, unit='Fl.', einstand=76.50, markt=79.0, quelle='Richtwert Händler CH'),
+    dict(name='Rosso del Bepi 2016, Quintarelli', sub='Veneto · Investment III', n=12, unit='Fl.', einstand=155.0, markt=149.0, quelle='Händler CH, Nov 2026'),
+]
+def chf(x): return "CHF " + f"{x:,.0f}".replace(',', "'")
+def wert_section():
+    rows = ''
+    tot_e = tot_m = 0.0
+    mx = max((w['n'] * max(w['einstand'] or 0, w['markt'])) for w in WERT)
+    for w in WERT:
+        e_tot = w['n'] * w['einstand'] if w['einstand'] else None
+        m_tot = w['n'] * w['markt']
+        if e_tot: tot_e += e_tot; tot_m += m_tot
+        delta = ((w['markt'] - w['einstand']) / w['einstand'] * 100) if w['einstand'] else None
+        d_html = (f'<span class="delta {"up" if delta >= 0 else "down"}">{"+" if delta >= 0 else "−"}{abs(delta):.0f} %</span>' if delta is not None else '<span class="delta na">Einstand folgt</span>')
+        bar_e = f'<i class="bar bar-e" style="width:{(e_tot / mx * 100) if e_tot else 0:.1f}%"></i>'
+        bar_m = f'<i class="bar bar-m" style="width:{m_tot / mx * 100:.1f}%"></i>'
+        rows += f"""
+    <div class="wert-row reveal">
+      <div class="wert-name"><h3>{w['name']}</h3><span class="small">{w['sub']} · {w['n']} {w['unit']}</span></div>
+      <div class="wert-bars">{bar_e}{bar_m}</div>
+      <dl class="wert-nums">
+        <dt>Einstand</dt><dd>{(chf(w['einstand']) if w['einstand'] else '[CHF]')}<span class="small"> / {w['unit']}</span>{(' · ' + chf(e_tot) + ' total') if e_tot else ''}</dd>
+        <dt>Marktwert</dt><dd>ca. {chf(w['markt'])}<span class="small"> / {w['unit']}</span> · {chf(m_tot)} total</dd>
+      </dl>
+      {d_html}
+    </div>"""
+    tot_d = (tot_m - tot_e) / tot_e * 100
+    return f"""
+<section class="section stack" style="gap:32px" id="wertentwicklung">
+  <div class="stack reveal" style="gap:12px"><p class="overline">Wertentwicklung</p><h2>Was der Keller heute wert ist.</h2>
+    <p class="lead">Wir kaufen zum Trinken, nicht zum Spekulieren – schauen aber trotzdem hin. Marktwerte sind Richtwerte aus aktuellen Schweizer Händlerpreisen (inkl. MwSt), kein Verkaufsangebot.</p></div>
+  <div class="wert-total reveal">
+    <div><span class="k">{chf(tot_e)}</span><span class="v">Einstand bezahlt</span></div>
+    <div><span class="k">ca. {chf(tot_m)}</span><span class="v">Marktwert heute</span></div>
+    <div><span class="k {"up" if tot_d >= 0 else "down"}">{"+" if tot_d >= 0 else "−"}{abs(tot_d):.0f} %</span><span class="v">Entwicklung seit Kauf</span></div>
+  </div>
+  <div class="wert-list">{rows}
+  </div>
+  <p class="small reveal">Legende: schwarzer Balken = Einstand total, cyan = Marktwert total. Pontet-Canet zählt erst mit, sobald der Einstandspreis eingetragen ist. Stand November 2026 – wird jährlich zur Hauptversammlung aktualisiert.</p>
+</section>
+"""
+
 WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des Weinclubs crazytable: Kellerregel, Bestand, Reifeplan und die Abstimmungen der Hauptversammlung.', 'weinkeller') + f"""
 <section class="band-green cellar-hero" style="background:linear-gradient(90deg,rgba(11,11,11,.92) 0%,rgba(11,11,11,.75) 50%,rgba(11,11,11,.45) 100%),url(/img/keller-bg.jpg) center/cover no-repeat">
   <div class="wrap grid-12" style="padding:0;align-items:end">
@@ -394,6 +442,8 @@ WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des We
     </article>
   </div>
 </section>
+
+{wert_section()}
 
 <section class="section stack" style="gap:32px">
   <div class="stack" style="gap:12px"><p class="overline">Reifeplan</p><h2>Wann öffnen wir was?</h2><p class="lead">Jede Linie ist ein Wein im Keller: von Kauf über Lieferung bis zum Trinkfenster. Jahreszahlen sind Schätzungen und werden an der HV überprüft.</p></div>
