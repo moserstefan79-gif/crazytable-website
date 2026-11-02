@@ -490,8 +490,6 @@ WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des We
   </div>
 </section>
 
-{wert_section()}
-
 <section class="section stack" style="gap:32px">
   <div class="stack" style="gap:12px"><p class="overline">Reifeplan</p><h2>Wann öffnen wir was?</h2><p class="lead">Jede Linie ist ein Wein im Keller: von Kauf über Lieferung bis zum Trinkfenster. Jahreszahlen sind Schätzungen und werden an der HV überprüft.</p></div>
   <div class="timeline" role="img" aria-label="Zeitstrahl 2023 bis 2040 mit Kauf, Lieferung und Trinkfenster je Wein">
