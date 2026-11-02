@@ -322,35 +322,75 @@ ANLAESSE = head('Anlässe – crazytable', 'Degustationsabende und Reisen des We
 # ---------- Wertentwicklung Weinkeller ----------
 # Einstand = bezahlter Preis pro Einheit; markt = Richtwert Schweizer Händlerpreis inkl. MwSt (Stand Nov 2026). None = noch offen.
 WERT = [
-    dict(name='Château Pontet-Canet 2023', sub='Pauillac · Investment I', n=18, unit='Fl.', einstand=None, markt=84.0, quelle='Händler CH, Nov 2026'),
+    dict(name='Château Pontet-Canet 2023', sub='Pauillac · Investment I', n=18, unit='Fl.', einstand=75.0, markt=84.0, quelle='Händler CH, Nov 2026'),
     dict(name='Château Giscours 2020, Impériale', sub='Margaux · 6 Liter', n=1, unit='Impériale', einstand=538.50, markt=580.0, quelle='Schätzung aus 75-cl-Preis + Formatzuschlag'),
     dict(name='Plansel Selecta Grande Escolha 2019', sub='Alentejo · Investment II', n=24, unit='Fl.', einstand=76.50, markt=79.0, quelle='Richtwert Händler CH'),
     dict(name='Rosso del Bepi 2016, Quintarelli', sub='Veneto · Investment III', n=12, unit='Fl.', einstand=155.0, markt=149.0, quelle='Händler CH, Nov 2026'),
 ]
 def chf(x): return "CHF " + f"{x:,.0f}".replace(',', "'")
 def wert_section():
-    rows = ''
+    # Gruppierte Balken: Einstand (schwarz) vs. Marktwert (cyan) je Wein, Totalwerte
+    W, H = 920, 420
+    padL, padR, padT, padB = 64, 16, 28, 86
+    plotW, plotH = W - padL - padR, H - padT - padB
+    vals = [w['n'] * max(w['einstand'] or 0, w['markt']) for w in WERT]
+    ymax = max(vals) * 1.18
+    step = 500
+    gw = plotW / len(WERT)
+    bw = min(72, gw * 0.28)
+    gap = 6
+    def y(v): return padT + plotH - v / ymax * plotH
+    def fmt(v): return f"{v:,.0f}".replace(',', "'")
+    svg = []
+    # Gitter
+    v = 0
+    while v <= ymax:
+        yy = y(v)
+        svg.append(f'<line x1="{padL}" x2="{W - padR}" y1="{yy:.1f}" y2="{yy:.1f}" class="grid"/><text x="{padL - 10}" y="{yy + 4:.1f}" class="ax" text-anchor="end">{fmt(v) if v else 0}</text>')
+        v += step
+    svg.append(f'<line x1="{padL}" x2="{W - padR}" y1="{y(0):.1f}" y2="{y(0):.1f}" class="base"/>')
     tot_e = tot_m = 0.0
-    mx = max((w['n'] * max(w['einstand'] or 0, w['markt'])) for w in WERT)
-    for w in WERT:
+    for i, w in enumerate(WERT):
+        cx = padL + gw * (i + .5)
         e_tot = w['n'] * w['einstand'] if w['einstand'] else None
         m_tot = w['n'] * w['markt']
         if e_tot: tot_e += e_tot; tot_m += m_tot
-        delta = ((w['markt'] - w['einstand']) / w['einstand'] * 100) if w['einstand'] else None
-        d_html = (f'<span class="delta {"up" if delta >= 0 else "down"}">{"+" if delta >= 0 else "−"}{abs(delta):.0f} %</span>' if delta is not None else '<span class="delta na">Einstand folgt</span>')
-        bar_e = f'<i class="bar bar-e" style="width:{(e_tot / mx * 100) if e_tot else 0:.1f}%"></i>'
-        bar_m = f'<i class="bar bar-m" style="width:{m_tot / mx * 100:.1f}%"></i>'
-        rows += f"""
-    <div class="wert-row reveal">
-      <div class="wert-name"><h3>{w['name']}</h3><span class="small">{w['sub']} · {w['n']} {w['unit']}</span></div>
-      <div class="wert-bars">{bar_e}{bar_m}</div>
-      <dl class="wert-nums">
-        <dt>Einstand</dt><dd>{(chf(w['einstand']) if w['einstand'] else '[CHF]')}<span class="small"> / {w['unit']}</span>{(' · ' + chf(e_tot) + ' total') if e_tot else ''}</dd>
-        <dt>Marktwert</dt><dd>ca. {chf(w['markt'])}<span class="small"> / {w['unit']}</span> · {chf(m_tot)} total</dd>
-      </dl>
-      {d_html}
-    </div>"""
+        xe, xm = cx - bw - gap / 2, cx + gap / 2
+        if e_tot:
+            svg.append(f'<g class="bar-g" style="--d:{i * .12:.2f}s"><title>{w["name"]} – Einstand {w["n"]} × CHF {w["einstand"]:.2f} = CHF {fmt(e_tot)}</title>'
+                       f'<rect x="{xe:.1f}" y="{y(e_tot):.1f}" width="{bw:.1f}" height="{plotH - (y(e_tot) - padT):.1f}" class="b-e"/>'
+                       f'<text x="{xe + bw / 2:.1f}" y="{y(e_tot) - 8:.1f}" class="val" text-anchor="middle">{fmt(e_tot)}</text></g>')
+        else:
+            svg.append(f'<g class="bar-g" style="--d:{i * .12:.2f}s"><title>{w["name"]} – Einstandspreis folgt</title>'
+                       f'<rect x="{xe:.1f}" y="{y(m_tot * .55):.1f}" width="{bw:.1f}" height="{plotH - (y(m_tot * .55) - padT):.1f}" class="b-na"/>'
+                       f'<text x="{xe + bw / 2:.1f}" y="{y(m_tot * .55) - 8:.1f}" class="val muted" text-anchor="middle">?</text></g>')
+        svg.append(f'<g class="bar-g" style="--d:{i * .12 + .06:.2f}s"><title>{w["name"]} – Marktwert ca. {w["n"]} × CHF {w["markt"]:.0f} = CHF {fmt(m_tot)} ({w["quelle"]})</title>'
+                   f'<rect x="{xm:.1f}" y="{y(m_tot):.1f}" width="{bw:.1f}" height="{plotH - (y(m_tot) - padT):.1f}" class="b-m"/>'
+                   f'<text x="{xm + bw / 2:.1f}" y="{y(m_tot) - 8:.1f}" class="val" text-anchor="middle">{fmt(m_tot)}</text></g>')
+        # Beschriftung
+        name = w['name'].split(',')[0].replace('Château ', '').replace('Selecta Grande Escolha', 'Selecta GE')
+        svg.append(f'<text x="{cx:.1f}" y="{H - padB + 26}" class="lbl" text-anchor="middle">{name}</text>'
+                   f'<text x="{cx:.1f}" y="{H - padB + 44}" class="ax" text-anchor="middle">{w["sub"].split(" · ")[0]} · {w["n"]} {w["unit"]}</text>')
+        if e_tot:
+            d = (w['markt'] - w['einstand']) / w['einstand'] * 100
+            svg.append(f'<text x="{cx:.1f}" y="{H - padB + 70}" class="dl {"up" if d >= 0 else "down"}" text-anchor="middle">{"+" if d >= 0 else "−"}{abs(d):.0f} %</text>')
+        else:
+            svg.append(f'<text x="{cx:.1f}" y="{H - padB + 70}" class="dl na" text-anchor="middle">Einstand folgt</text>')
+    # Mobile: horizontale Balken als HTML
+    mx = max(vals)
+    mrows = ''
+    for w in WERT:
+        e_tot = w['n'] * w['einstand'] if w['einstand'] else None
+        m_tot = w['n'] * w['markt']
+        d = ((w['markt'] - w['einstand']) / w['einstand'] * 100) if w['einstand'] else None
+        dl = (f'<span class="dl {"up" if d >= 0 else "down"}">{"+" if d >= 0 else "−"}{abs(d):.0f} %</span>' if d is not None else '<span class="dl na">Einstand folgt</span>')
+        be = (f'<div class="hb"><i class="b-e" style="width:{e_tot / mx * 80:.1f}%"></i><span>{fmt(e_tot)}</span></div>' if e_tot else
+              f'<div class="hb"><i class="b-na" style="width:{m_tot * .55 / mx * 100:.1f}%"></i><span class="muted">?</span></div>')
+        mrows += f"""
+      <div class="mrow"><div class="between" style="align-items:baseline"><h3>{w['name'].split(',')[0].replace('Château ', '').replace('Selecta Grande Escolha', 'Selecta GE')}</h3>{dl}</div><span class="small">{w['sub']} · {w['n']} {w['unit']}</span>
+        {be}<div class="hb"><i class="b-m" style="width:{m_tot / mx * 80:.1f}%"></i><span>{fmt(m_tot)}</span></div></div>"""
     tot_d = (tot_m - tot_e) / tot_e * 100
+    chart = '\n'.join(svg)
     return f"""
 <section class="section stack" style="gap:32px" id="wertentwicklung">
   <div class="stack reveal" style="gap:12px"><p class="overline">Wertentwicklung</p><h2>Was der Keller heute wert ist.</h2>
@@ -360,9 +400,16 @@ def wert_section():
     <div><span class="k">ca. {chf(tot_m)}</span><span class="v">Marktwert heute</span></div>
     <div><span class="k {"up" if tot_d >= 0 else "down"}">{"+" if tot_d >= 0 else "−"}{abs(tot_d):.0f} %</span><span class="v">Entwicklung seit Kauf</span></div>
   </div>
-  <div class="wert-list">{rows}
-  </div>
-  <p class="small reveal">Legende: schwarzer Balken = Einstand total, cyan = Marktwert total. Pontet-Canet zählt erst mit, sobald der Einstandspreis eingetragen ist. Stand November 2026 – wird jährlich zur Hauptversammlung aktualisiert.</p>
+  <figure class="wert-chart reveal">
+    <div class="legend"><span><i class="sw sw-e"></i>Einstand total</span><span><i class="sw sw-m"></i>Marktwert heute (ca.)</span><span class="small" style="margin-left:auto">CHF · Stand Nov. 2026</span></div>
+    <svg viewBox="0 0 {W} {H}" role="img" aria-label="Balkendiagramm: Einstand und heutiger Marktwert je Wein im Clubkeller">
+      <defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#C9CAC8" stroke-width="2"/></pattern></defs>
+      {chart}
+    </svg>
+    <div class="wert-mobile">{mrows}
+    </div>
+    <figcaption class="small">Werte je Position: Einstand × Anzahl Flaschen bzw. aktueller Händlerpreis × Anzahl. Wird jährlich zur Hauptversammlung aktualisiert.</figcaption>
+  </figure>
 </section>
 """
 
@@ -394,7 +441,7 @@ WEINKELLER = head('Weinkeller – crazytable', 'Der gemeinsame Weinkeller des We
         <h3>Château Pontet-Canet 2023</h3>
         <span class="small">Pauillac, Bordeaux · 5ème Grand Cru Classé · biodynamisch</span>
         <p>Im Gründungsjahr en primeur gekauft. 2026 kommt die Lieferung – dann entscheiden wir: ein paar Flaschen öffnen oder alles weiter liegen lassen.</p>
-        <dl class="facts"><dt>Flaschen</dt><dd>18 × 75 cl</dd><dt>Einstand</dt><dd>[CHF]</dd><dt>Trinkfenster</dt><dd>ab ca. [2033]</dd></dl>
+        <dl class="facts"><dt>Flaschen</dt><dd>18 × 75 cl</dd><dt>Einstand</dt><dd>CHF 75 (CHF 1'350 total)</dd><dt>Trinkfenster</dt><dd>ab ca. [2033]</dd></dl>
         <details class="more"><summary>Mehr zum Weingut</summary><p>Pontet-Canet gehört seit 1975 der Familie Tesseron; Alfred Tesseron führt das Gut seit 1994. 81 Hektar in Pauillac, rund 62 % Cabernet Sauvignon und 32 % Merlot. Seit 2004 wird biodynamisch gearbeitet – als erstes grosses Bordeaux-Gut mit Bio-Zertifikat (2010) und seit Jahrgang 2014 Demeter. Ein Teil der Reben wird mit Pferden gepflügt, ein Teil des Weins reift in Amphoren aus dem eigenen Boden. Im Glas: ein Fünfter Cru, der regelmässig mit den Zweiten gemessen wird.</p></details>
       </div>
     </article>
