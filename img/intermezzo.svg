@@ -1,22 +1,35 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 200" width="760" height="200" role="img" aria-label="Intermezzo – crazytable">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 220" width="780" height="220" role="img" aria-label="Intermezzo – crazytable">
   <defs>
     <style>
       .word{font-family:'Cormorant Garamond',Georgia,'Times New Roman',serif;font-style:italic;font-weight:400;font-size:104px;letter-spacing:-0.02em;fill:#0B0B0B}
+      .zz{fill:#3EAFC8}
       .tag{font-family:'DM Sans',Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:0.3em;fill:#15728A}
     </style>
     <clipPath id="bowl"><path d="M-34 0 H34 C34 44 18 66 0 70 C-18 66 -34 44 -34 0 Z"/></clipPath>
   </defs>
-  <!-- Pausezeichen: zwei Balken, dazwischen ein Glas – das Intermezzo -->
-  <g transform="translate(22 34)">
-    <rect x="0" y="0" width="14" height="132" fill="#0B0B0B"/>
-    <rect x="118" y="0" width="14" height="132" fill="#0B0B0B"/>
-    <g transform="translate(66 8)">
-      <rect x="-40" y="30" width="80" height="50" fill="#3EAFC8" clip-path="url(#bowl)"/>
+
+  <!-- Weinring als Fleck hinter dem Wort -->
+  <ellipse cx="430" cy="112" rx="135" ry="26" fill="none" stroke="#3EAFC8" stroke-width="4" opacity=".4" transform="rotate(-4 430 112)"/>
+
+  <!-- Pausezeichen: zwei Balken, dazwischen ein beschwingtes Glas -->
+  <g transform="translate(22 42)">
+    <rect x="0" y="0" width="14" height="132" rx="2" fill="#0B0B0B" transform="rotate(-4 7 66)"/>
+    <rect x="118" y="0" width="14" height="132" rx="2" fill="#0B0B0B" transform="rotate(4 125 66)"/>
+    <g transform="translate(66 10) rotate(-14 0 70)">
+      <!-- Wein, leicht schräg im Glas -->
+      <rect x="-40" y="28" width="80" height="50" fill="#3EAFC8" clip-path="url(#bowl)" transform="rotate(14 0 50)"/>
       <path d="M-34 0 H34 C34 44 18 66 0 70 C-18 66 -34 44 -34 0 Z" fill="none" stroke="#0B0B0B" stroke-width="5" stroke-linejoin="round"/>
       <rect x="-3" y="70" width="6" height="34" fill="#0B0B0B"/>
-      <rect x="-24" y="104" width="48" height="6" rx="1" fill="#0B0B0B"/>
+      <rect x="-24" y="104" width="48" height="6" rx="3" fill="#0B0B0B"/>
     </g>
+    <!-- Spritzer -->
+    <circle cx="112" cy="-2" r="5" fill="#3EAFC8"/>
+    <circle cx="124" cy="-14" r="3" fill="#3EAFC8"/>
+    <circle cx="100" cy="-16" r="2.5" fill="#15728A"/>
+    <path d="M58 -6 q6 -16 2 -26" fill="none" stroke="#3EAFC8" stroke-width="3" stroke-linecap="round"/>
   </g>
-  <text x="178" y="122" class="word">Intermezzo</text>
-  <text x="182" y="158" class="tag">EINE FLASCHE · EIN MITTWOCH · ATIKA ZUCHWIL</text>
+
+  <!-- Wortmarke: die beiden z tanzen -->
+  <text x="178" y="130" class="word">Interme<tspan class="zz" dy="-10" rotate="-8">z</tspan><tspan class="zz" dy="16" rotate="10">z</tspan><tspan dy="-6">o</tspan></text>
+  <text x="182" y="168" class="tag">EINE FLASCHE · EIN MITTWOCH · ATIKA ZUCHWIL</text>
 </svg>
