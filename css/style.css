@@ -380,7 +380,8 @@ em.accent{font-style:italic;color:var(--green)}
 .facts-inline{color:#E6E8E3}
 .intermezzo-band .small{color:#B5B9B9}
 .intermezzo-band .overline{color:var(--cyan)}
-.facts-inline{list-style:none;margin:0;padding:0;display:grid;gap:8px;font-size:15px}
-.facts-inline b{display:inline-block;min-width:64px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;font-size:12px}
+.facts-inline{list-style:none;margin:0;padding:0;display:grid;gap:10px;font-size:15px}
+.facts-inline li{display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:baseline}
+.facts-inline b{font-weight:500;letter-spacing:.08em;text-transform:uppercase;font-size:12px}
 @media (max-width:980px){.intermezzo-band{padding:56px var(--pad)}}
 @media (max-width:640px){.intermezzo-band{padding:44px var(--pad)}}
