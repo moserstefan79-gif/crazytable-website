@@ -226,6 +226,24 @@ ANLAESSE = head('Anlässe – crazytable', 'Degustationsabende und Reisen des We
   </article>
 </section>
 
+<section class="section grid-12 intermezzo-band" id="intermezzo" style="align-items:center">
+  <div class="c1-5 reveal">
+    <img src="/img/intermezzo-dark.svg" alt="Intermezzo – eine Flasche, ein Mittwoch, Atika Zuchwil" style="width:100%;max-width:420px;display:block">
+  </div>
+  <div class="c6-7 stack reveal" style="gap:16px">
+    <p class="overline" style="color:var(--cyan)">Neues Format</p>
+    <h2 style="color:#fff">Intermezzo – das Zwischenspiel.</h2>
+    <p class="lead" style="color:#C9CEC2">Zwischen den grossen Anlässen gibt es jetzt die kleine Form: eine einzelne, spannende Flasche, die man nicht jeden Tag öffnet – spontan, an einem Mittwochabend im Atika in Zuchwil. Die Einladung kommt kurzfristig, die Plätze sind begrenzt, wer zuerst zusagt, ist dabei.</p>
+    <ul class="facts-inline" style="color:#C9CEC2">
+      <li><b style="color:#fff">Wann</b> Ein Mittwoch, ab 18.30 Uhr – angekündigt wenige Tage vorher</li>
+      <li><b style="color:#fff">Wo</b> Atika, Zuchwil</li>
+      <li><b style="color:#fff">Was</b> Eine Flasche, eine Geschichte, ein Glas pro Person – manchmal mit einer Überraschung dazu</li>
+      <li><b style="color:#fff">Preis</b> Immer separat, pro Abend – nicht im Mitgliederbeitrag enthalten</li>
+    </ul>
+    <p class="small" style="color:#9A9E9E">Einladung und Anmeldung laufen über den Mitgliederbereich.</p>
+  </div>
+</section>
+
 <section class="section stack" style="gap:40px">
   <div class="between reveal">
     <h2>Rückblick</h2>
