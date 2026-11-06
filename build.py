@@ -2,6 +2,8 @@
 """Erzeugt die HTML-Seiten von crazytable.ch aus gemeinsamen Bausteinen.
 Aufruf: python3 build.py  -> schreibt *.html ins gleiche Verzeichnis."""
 import os
+import hashlib as _h
+CSSV = _h.md5(open('css/style.css','rb').read()).hexdigest()[:8]
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
 FONTS = '<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">'
@@ -19,7 +21,7 @@ def head(title, desc, active):
 <meta property="og:type" content="website">
 <link rel="icon" href="/img/favicon.svg" type="image/svg+xml">
 {FONTS}
-<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css?v={CSSV}">
 <script src="/js/main.js" defer></script>
 </head>
 <body>
