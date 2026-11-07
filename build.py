@@ -32,6 +32,7 @@ def head(title, desc, active):
     <a href="/verein"{' class="is-active"' if active=='verein' else ''}>Verein</a>
     <a href="/anlaesse"{' class="is-active"' if active=='anlaesse' else ''}>Anlässe</a>
     <a href="/weinkeller"{' class="is-active"' if active=='weinkeller' else ''}>Weinkeller</a>
+    <a href="/weinkarte"{' class="is-active"' if active=='weinkarte' else ''}>Weinkarte</a>
     <a href="https://app.crazytable.ch" class="nav-muted">Login</a>
     <a href="/mitglied-werden" class="nav-cta">Mitglied werden</a>
   </nav>
@@ -46,7 +47,7 @@ FOOTER = '''</main>
       <img src="/img/logo-wordmark.png" alt="crazytable" style="width:170px;height:auto">
       <span style="color:#9A9E9E;line-height:1.6">Weinclub crazytable<br>Kirchberg BE</span>
     </div>
-    <div><span class="h">Club</span><a href="/verein">Verein &amp; Vorstand</a><a href="/anlaesse">Anlässe</a><a href="/weinkeller">Weinkeller</a></div>
+    <div><span class="h">Club</span><a href="/verein">Verein &amp; Vorstand</a><a href="/anlaesse">Anlässe</a><a href="/weinkeller">Weinkeller</a><a href="/weinkarte">Weinkarte</a></div>
     <div><span class="h">Mitmachen</span><a href="/mitglied-werden">Mitglied werden</a><a href="/verein#ideenbox">Ideenbox</a><a href="https://app.crazytable.ch">Mitglieder-Login</a></div>
     <div><span class="h">Kontakt</span><a href="mailto:stefan.moser@crazytable.ch">stefan.moser@crazytable.ch</a><a href="/mitglied-werden#kontakt">Kontaktformular</a></div>
   </div>
@@ -767,8 +768,130 @@ DATENSCHUTZ = simple('Datenschutz – crazytable', 'Datenschutzerklärung des We
 <h3>Deine Rechte</h3><p>Du kannst jederzeit Auskunft über deine bei uns gespeicherten Daten verlangen, sie berichtigen oder löschen lassen. Schreib dafür an <a href="mailto:stefan.moser@crazytable.ch" style="text-decoration:underline">stefan.moser@crazytable.ch</a>.</p>
 <p class="small">Stand: November 2026. Wir passen diese Erklärung an, wenn sich die Website oder die gesetzlichen Vorgaben ändern.</p>""")
 
+# ---------- Weinkarte ----------
+# Datenquelle: data/regions.json = Export der Supabase-Tabelle «regions» (Mitgliederbereich).
+# Aktualisieren: im Supabase-SQL-Editor
+#   select json_agg(json_build_object('slug',slug,'name',name,'country',country,'lat',lat,'lng',lng,'teaser',teaser,
+#     'description',description,'terms',terms,'status',status,'first_tasted',first_tasted,'note',note,'sort_order',sort_order)
+#     order by sort_order) from regions where active;
+# Resultat in data/regions.json speichern, dann python3 build.py.
+import json as _json, html as _html, re as _re, unicodedata as _ud
+REGIONS = _json.load(open(os.path.join(ROOT, 'data', 'regions.json'), encoding='utf-8'))
+STATUS_LABEL = {'TASTED': 'Im Glas gehabt', 'PLANNED': 'Geplant 2027', 'CATALOG': 'Noch nicht im Glas'}
+MONATE = ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember']
+COUNTRY_ORDER = ['Schweiz','Italien','Frankreich','Spanien','Portugal','Österreich','Deutschland','Argentinien','Mexiko','USA','Südafrika']
+
+def de_date(iso):
+    y, m, d = iso.split('-')
+    return f"{int(d)}. {MONATE[int(m)-1]} {y}"
+
+def termslug(t):
+    t = _ud.normalize('NFKD', t).encode('ascii', 'ignore').decode().lower()
+    return _re.sub(r'[^a-z0-9]+', '-', t).strip('-')
+
+def region_article(r):
+    meta = STATUS_LABEL[r['status']]
+    if r['status'] == 'TASTED' and r.get('first_tasted'):
+        meta += ' — zum ersten Mal am ' + de_date(r['first_tasted'])
+    chips = ''.join(f'<a class="chip chip-term" href="#begriff-{termslug(t)}">{_html.escape(t)}</a>' for t in r['terms'])
+    note = f'<p class="wk-note"><span class="meta">Bei uns</span>{_html.escape(r["note"])}</p>' if r.get('note') else ''
+    return (f'<article class="wk-region" id="{r["slug"]}" data-status="{r["status"].lower()}">'
+            f'<div class="wk-region-head"><span class="meta">{_html.escape(r["country"])} · {meta}</span>'
+            f'<h3>{_html.escape(r["name"])}</h3><p class="wk-teaser">{_html.escape(r["teaser"])}</p></div>'
+            f'<div class="wk-region-body"><p>{_html.escape(r["description"] or "")}</p>{note}<div class="chips">{chips}</div></div>'
+            f'</article>')
+
+def regions_by_country():
+    out = []
+    for c in COUNTRY_ORDER:
+        rs = [r for r in REGIONS if r['country'] == c]
+        if rs:
+            out.append(f'<div class="wk-country" id="land-{termslug(c)}"><h2 class="wk-country-h">{c}</h2>'
+                       f'<div class="wk-regions">{"".join(region_article(r) for r in rs)}</div></div>')
+    return ''.join(out)
+
+def term_index():
+    idx = {}
+    for r in REGIONS:
+        for t in r['terms']:
+            idx.setdefault(t, []).append(r)
+    items = []
+    for t in sorted(idx, key=termslug):
+        links = ', '.join(f'<a href="#{r["slug"]}">{_html.escape(r["name"].split(" (")[0])}</a>' for r in idx[t])
+        items.append(f'<li id="begriff-{termslug(t)}"><b>{_html.escape(t)}</b><span>{links}</span></li>')
+    return ''.join(items)
+
+N_TASTED = sum(1 for r in REGIONS if r['status'] == 'TASTED')
+N_PLANNED = sum(1 for r in REGIONS if r['status'] == 'PLANNED')
+N_TERMS = len({t for r in REGIONS for t in r['terms']})
+COUNTRY_NAV = ''.join(f'<a class="chip" href="#land-{termslug(c)}">{c}</a>' for c in COUNTRY_ORDER if any(r['country'] == c for r in REGIONS))
+MAP_DATA = _json.dumps([dict(slug=r['slug'], name=r['name'], lat=r['lat'], lng=r['lng'], status=r['status']) for r in REGIONS], ensure_ascii=False)
+
+WEINKARTE = head('Weinkarte – crazytable', 'Die Weinkarte des Weinclubs crazytable: alle Regionen, aus denen wir an unseren Anlässen getrunken haben, mit kurzen Porträts und den Begriffen, die man dazu kennen sollte.', 'weinkarte') + f"""
+<section class="band-green cellar-hero wk-hero">
+  <div class="wrap grid-12" style="padding:0;align-items:end">
+    <div class="c1-8 stack stack-lg">
+      <p class="overline">Weinkarte</p>
+      <h1 style="font-size:clamp(56px,9vw,120px)">Wo wir <em>getrunken</em> haben.</h1>
+      <p class="lead" style="max-width:560px">Jede Region leuchtet, sobald ein Wein von dort bei einem Clubanlass im Glas war. Seit 2023 wächst die Karte Anlass für Anlass – und mit ihr unser kleines Weinlexikon.</p>
+    </div>
+    <div class="c10-3 cellar-rule">
+      <span class="k">{N_TASTED}</span><span class="v">Regionen im Glas gehabt</span>
+      <span class="k">{N_PLANNED}</span><span class="v">Regionen geplant für 2027</span>
+      <span class="k">{N_TERMS}</span><span class="v">Begriffe im Lexikon</span>
+    </div>
+  </div>
+</section>
+
+<section class="wk-mapband">
+  <div class="wrap">
+    <div class="wk-toolbar">
+      <div class="wk-seg" role="group" aria-label="Kartenausschnitt"><button type="button" data-view="eu" aria-pressed="true">Europa</button><button type="button" data-view="world" aria-pressed="false">Welt</button></div>
+      <div class="wk-legend"><span><i class="wk-dot is-tasted"></i>im Glas gehabt</span><span><i class="wk-dot is-planned"></i>geplant 2027</span><span><i class="wk-dot is-catalog"></i>noch nicht</span></div>
+    </div>
+    <div class="wk-map" id="wk-map" aria-label="Karte der Weinregionen"></div>
+    <p class="small wk-hint">Auf einen Punkt tippen, um zur Region zu springen.</p>
+  </div>
+  <script id="wk-data" type="application/json">{MAP_DATA}</script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/datamaps/0.5.9/datamaps.world.min.js" defer></script>
+  <script src="/js/weinkarte.js" defer></script>
+</section>
+
+<div class="wrap" style="padding:0">
+
+<section class="section stack" style="gap:48px">
+  <div class="between reveal">
+    <h2>Die Regionen</h2>
+    <nav class="chips wk-countrynav" aria-label="Länder">{COUNTRY_NAV}</nav>
+  </div>
+  {regions_by_country()}
+</section>
+
+<section class="section grid-12" style="row-gap:40px">
+  <div class="c1-4 stack">
+    <p class="overline">Weinlexikon</p>
+    <h2>Begriffe, die man kennen sollte</h2>
+    <p class="lead">Jede Region bringt ihre eigenen Wörter mit. Hier stehen sie beieinander – mit dem Verweis, wo sie auf der Karte zu Hause sind. Die Erklärungen wachsen nach jedem Anlass.</p>
+  </div>
+  <ol class="wk-terms c6-7">{term_index()}</ol>
+</section>
+
+<section class="section" style="border-bottom:0">
+  <article class="card card-dashed" style="max-width:560px">
+    <p class="overline">Deine Idee</p>
+    <h3>Welche Region fehlt?</h3>
+    <p>Eine Ecke, die auf der Karte noch dunkel ist, ein Winzer, den wir kennenlernen sollten – schick uns deinen Vorschlag.</p>
+    <a class="arrow" href="/verein#ideenbox" style="color:var(--ink)">Zur Ideenbox →</a>
+  </article>
+</section>
+</div>
+""" + FOOTER
+
+
 PAGES = {
-    'index.html': INDEX, 'anlaesse.html': ANLAESSE, 'weinkeller.html': WEINKELLER, 'verein.html': VEREIN,
+    'index.html': INDEX, 'anlaesse.html': ANLAESSE, 'weinkeller.html': WEINKELLER, 'weinkarte.html': WEINKARTE, 'verein.html': VEREIN,
     'mitglied-werden.html': MITGLIED, 'danke.html': DANKE,
     'disclaimer.html': DISCLAIMER, 'datenschutz.html': DATENSCHUTZ,
 }

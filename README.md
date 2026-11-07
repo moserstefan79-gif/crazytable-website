@@ -4,6 +4,7 @@ Statische Website, gebaut für Netlify. Keine Datenbank, kein Build-Tool nötig.
 
 ## Struktur
 - `index.html`, `anlaesse.html`, `weinkeller.html`, `verein.html`, `mitglied-werden.html` – die fünf Seiten
+- `weinkarte.html` – Weinkarte und Weinlexikon; Daten aus `data/regions.json` (Export der Supabase-Tabelle `regions`, SQL steht in `build.py`), Karte via `js/weinkarte.js` (Datamaps/d3 von cdnjs)
 - `danke.html` (Formular-Bestätigung), `disclaimer.html`, `datenschutz.html`
 - `css/style.css` – das ganze Design (Farben/Schriften oben in `:root`)
 - `img/` – Bilder; `favicon.svg` ist drin, Fotos fehlen noch (siehe unten)

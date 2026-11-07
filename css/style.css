@@ -385,3 +385,54 @@ em.accent{font-style:italic;color:var(--green)}
 .facts-inline b{font-weight:500;letter-spacing:.08em;text-transform:uppercase;font-size:12px}
 @media (max-width:980px){.intermezzo-band{padding:56px var(--pad)}}
 @media (max-width:640px){.intermezzo-band{padding:44px var(--pad)}}
+
+/* Weinkarte */
+.wk-hero{padding-bottom:64px}
+.wk-mapband{background:var(--black);color:#fff;padding:0 var(--pad) 56px}
+.wk-mapband .wrap{padding:0}
+.wk-toolbar{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;padding:0 0 16px;font-size:13px;letter-spacing:.04em}
+.wk-seg{display:inline-flex;border:1px solid rgba(255,255,255,.25);border-radius:2px;overflow:hidden}
+.wk-seg button{background:transparent;color:#C9CDCD;border:0;padding:9px 16px;font:inherit;font-size:12px;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.wk-seg button[aria-pressed="true"]{background:var(--cyan);color:var(--black)}
+.wk-seg button:focus-visible{outline:2px solid var(--cyan);outline-offset:-2px}
+.wk-legend{display:flex;flex-wrap:wrap;gap:8px 20px;color:#C9CDCD}
+.wk-legend span{display:inline-flex;align-items:center;gap:8px}
+.wk-dot{width:10px;height:10px;border-radius:50%;display:inline-block;box-sizing:border-box}
+.wk-dot.is-tasted{background:var(--cyan);box-shadow:0 0 8px var(--cyan)}
+.wk-dot.is-planned{border:2px solid var(--cyan)}
+.wk-dot.is-catalog{background:#55595C}
+.wk-map{width:100%;height:560px;border:1px solid rgba(255,255,255,.12);background:#0F1113}
+.wk-map svg{display:block}
+.wk-map .datamaps-subunit{stroke-width:.5px}
+.wk-map .datamaps-bubble.is-tasted{filter:drop-shadow(0 0 6px var(--cyan))}
+.wk-map .datamaps-bubble:focus-visible{outline:none;stroke:#fff;stroke-width:2px}
+.motion .wk-map .datamaps-bubble.is-tasted{animation:wk-pulse 2.8s ease-in-out infinite}
+@keyframes wk-pulse{0%,100%{opacity:1}50%{opacity:.55}}
+.wk-hint{color:#9A9E9E;padding-top:12px}
+.wk-countrynav .chip{color:var(--text)}
+.wk-countrynav .chip:hover{border-color:var(--ink);color:var(--ink)}
+.wk-country{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:32px;row-gap:24px;padding-top:40px;border-top:1px solid var(--line)}
+.wk-country-h{grid-column:1/span 3;font-size:clamp(30px,3vw,40px);position:sticky;top:24px;align-self:start}
+.wk-regions{grid-column:4/span 9;display:flex;flex-direction:column}
+.wk-region{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);column-gap:32px;row-gap:16px;padding:32px 0;border-bottom:1px solid var(--line);scroll-margin-top:24px;transition:background .6s}
+.wk-region:first-child{padding-top:0}
+.wk-region.is-target{background:linear-gradient(90deg,rgba(62,175,200,.12),transparent 70%)}
+.wk-region-head{display:flex;flex-direction:column;gap:10px;min-width:0}
+.wk-region-head h3{font-size:32px;line-height:1.05}
+.wk-region[data-status="tasted"] .wk-region-head .meta{color:var(--green)}
+.wk-region[data-status="catalog"] h3{color:var(--text)}
+.wk-teaser{font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.3;color:var(--ink);max-width:36ch}
+.wk-region-body{display:flex;flex-direction:column;gap:16px;min-width:0;font-size:16px;line-height:1.7;color:var(--text);max-width:62ch}
+.wk-note{font-size:14px;color:var(--muted);display:flex;flex-direction:column;gap:2px}
+.wk-note .meta{color:var(--green);font-size:11px}
+.chip-term{font-size:12px;padding:6px 10px;text-transform:none;letter-spacing:.02em;color:var(--text)}
+.chip-term:hover{border-color:var(--ink);color:var(--ink)}
+.wk-terms{list-style:none;margin:0;padding:0;columns:2;column-gap:32px}
+.wk-terms li{break-inside:avoid;display:flex;flex-direction:column;gap:2px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}
+.wk-terms li b{font-family:var(--serif);font-weight:500;font-size:20px;color:var(--ink);letter-spacing:-.01em}
+.wk-terms li span{color:var(--muted)}
+.wk-terms li a{color:var(--green)}
+.wk-terms li a:hover{color:var(--ink)}
+.wk-terms li:target{background:rgba(62,175,200,.12);margin:0 -10px;padding-left:10px;padding-right:10px}
+@media (max-width:980px){.wk-country{grid-template-columns:1fr}.wk-country-h{grid-column:auto;position:static}.wk-regions{grid-column:auto}.wk-region{grid-template-columns:1fr}.wk-terms{columns:1}.wk-terms{grid-column:auto}.wk-map{height:440px}}
+@media (max-width:700px){.wk-mapband{padding-bottom:40px}.wk-map{height:360px}.wk-region-head h3{font-size:28px}.wk-teaser{font-size:19px}}
