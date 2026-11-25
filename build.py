@@ -133,7 +133,7 @@ INDEX = head('crazytable – Weinclub in Kirchberg BE', 'Weinclub in Kirchberg B
     <li><span class="n">01</span><h3>Die Idee</h3><p>Gemeinsame Aktivitäten rund um Wein und Weinproduktion. Wir pflegen das regionale Gemeinschaftsgefühl – und der Wein spielt dabei immer die Hauptrolle.</p></li>
     <li><span class="n">02</span><h3>Die Degustationen</h3><p>Zwei Anlässe pro Jahr – mal ein Degustationsabend, mal eine Reise. Jedes Mal ein Thema, mindestens sechs Weine im Glas und Menschen, die sie kennen: Winzer, Importeure, Weinfreunde. Dazu immer ein passendes Essen.</p></li>
     <li><span class="n">03</span><h3>Der Weinkeller</h3><p>Einmal im Jahr entscheiden wir an der Hauptversammlung gemeinsam, welche Trouvaille in den Clubkeller kommt – 20 % der Beiträge, Weine, die wir in ein paar Jahren zusammen öffnen.</p></li>
-    <li><span class="n">04</span><h3>Der Verein</h3><p>Gegründet am 1. März 2023 in Kirchberg BE. Maximal 25 Mitglieder, CHF 350 Jahresbeitrag – darin enthalten: zwei Anlässe inklusive Essen und dein Anteil am Keller.</p></li>
+    <li><span class="n">04</span><h3>Der Verein</h3><p>Gegründet am 1. März 2023 in Kirchberg BE. Maximal 25 Mitglieder, CHF 350 Jahresbeitrag – darin enthalten: zwei Anlässe inklusive Essen und dein Anteil am Keller. Unser Clublokal: das <a href="/verein#clublokal" style="text-decoration:underline">Kargo68</a> in Zuchwil.</p></li>
   </ol>
 </section>
 
@@ -629,6 +629,23 @@ VEREIN = head('Verein & Vorstand – crazytable', 'Vorstand, Hauptversammlung un
       <div class="stack" style="gap:2px"><strong style="font-weight:500">Yves Schüpbach</strong><span class="small">Revisor</span></div>
     </div>
   </div>
+</section>
+
+<section class="section grid-12 lokal-band" id="clublokal" style="align-items:start">
+  <div class="c1-7 stack">
+    <p class="overline" style="color:var(--cyan)">Clublokal</p>
+    <h2 style="font-size:40px;color:#fff">Kargo68 – unser Tisch steht in Zuchwil</h2>
+    <p class="lead" style="color:#E6E8E3;max-width:none">Seit 2026 haben wir ein Zuhause: das Kargo68 im Riverside Zuchwil, direkt an der Aare vor den Toren Solothurns. Aus 68 ausgedienten Schiffscontainern gebaut, industriell, roh und warm zugleich – mit einem langen Tisch, an dem der ganze Club Platz hat.</p>
+    <p style="color:#C9CEC2">Hier finden unsere beiden Degustationsabende und die Hauptversammlung statt. Zum Haus gehört auch das <strong style="color:#fff">Atika</strong>, in dem wir uns beim Intermezzo zu einer einzelnen Flasche treffen – und die Dachterrasse, wenn das Wetter mitspielt.</p>
+    <div class="row"><a class="btn btn-ghost" style="border-color:#fff;color:#fff" href="https://kargo.events" target="_blank" rel="noopener">kargo.events</a><a class="btn btn-ghost" style="border-color:#fff;color:#fff" href="https://maps.google.com/?q=Niedermattstrasse+2a,+4528+Zuchwil" target="_blank" rel="noopener">Anfahrt</a></div>
+  </div>
+  <ul class="facts-inline c9-4" style="color:#E6E8E3;padding-top:12px">
+    <li><b style="color:#fff">Adresse</b>Niedermattstrasse 2a, 4528 Zuchwil – Riverside, zwischen RiverNest, RiverLoft und Halle 333</li>
+    <li><b style="color:#fff">Haus</b>68 Container, zwei Restaurants, Eventhalle und Dachterrasse</li>
+    <li><b style="color:#fff">Bei uns</b>Degustationsabende, Hauptversammlung, Tagesanlässe – am langen Tisch</li>
+    <li><b style="color:#fff">Intermezzo</b>im Atika, mittwochs, auf kurzfristige Einladung</li>
+    <li><b style="color:#fff">Anreise</b>Ab Bahnhof Solothurn mit dem Bus oder zu Fuss der Aare entlang; Parkplätze vor Ort</li>
+  </ul>
 </section>
 
 <section class="section grid-12" id="hauptversammlung">
